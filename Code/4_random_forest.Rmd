@@ -1,0 +1,108 @@
+---
+title: "4_random_fortest"
+author: "Pedro"
+date: "8/9/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r}
+library(tibble)
+library(dplyr)
+library(Boruta)
+library(caret)
+library(randomForest)
+
+```
+
+
+# 1 - prepare phyloseq object to be an input in Boruta
+```{r boruta}
+
+
+
+
+#transpose phtseq otu table  
+otu_cells_wide <- as.data.frame(t(otu_table(physeq_goodSamples_rarefied)))%>% 
+                              rownames_to_column(var = "sample")
+
+# extract sample data
+metadata_rf <-as(sample_data(physeq_goodSamples_rarefied),"data.frame")%>%
+              rownames_to_column(var = "sample")
+
+#add the variable classification you want to predict with the random forest
+Boruta_input<-
+  merge(select(metadata_rf,sample, "Treatment"),
+        otu_cells_wide,
+        by = "sample",
+        all.y = TRUE)%>%
+  column_to_rownames(var = "sample")
+ 
+
+#check your df
+str(Boruta_input[1:10,1:10]) # if your "Treatment" is not a factor, boruta won't work
+Boruta_input$Treatment<-as.factor(Boruta_input$Treatment)
+
+
+
+```
+
+
+# run Boruta to define imporntat features
+```{r}
+#run borura
+set.seed(456987)
+Boruta_output<- Boruta(Treatment~.,   
+                       data = Boruta_input,
+                       doTrace=2, 
+                       maxRuns = 50, 
+                       ntree = 100) #increase the maximum number of runs to decrease the number of tenttively important OTUs. increase the number of trees to increase precision. decrease either to reduce computational time.
+```
+
+
+
+# 7.1.1 visualize boruta results 
+
+```{r boruta}
+
+#let Boruta decide if tentative features are ultimatetly important or not ; 
+fixed_boruta_objt<- TentativeRoughFix(Boruta_output)
+
+# get a list of ASVs defined as inportant by Boruta
+boruta_ASV_list<- getSelectedAttributes(fixed_boruta_objt)
+
+# get the list of ASVs defined as inportant by Boruta in formula format ; this can be used to calculate precision
+boruta_formula<- getConfirmedFormula(fixed_boruta_objt)
+
+#make a plot showing imporance of features
+boruta_plot<- plot(fixed_boruta_objt)
+
+#make a plot showing imporance and classification of features over iteration time
+boruta_history<-  plotImpHistory(fixed_boruta_objt)
+
+```
+
+# calculate precision and kappa with confusion matrixes
+```{r}
+
+
+
+# define random seed
+set.seed(4551)
+
+#define training model
+train.control <- trainControl(method = "repeatedcv", # set trainig/data split controls for the train function
+                              number = 5, 
+                              repeats = 50)
+# calculate precision
+model_borutized <- train(boruta_formula, 
+                         data = Boruta_input, 
+                         method = "rf", #execute training based on random forest; model is based on borut formula of important features
+               trControl = train.control, ntree=10)
+
+# plot confusion matrix
+confusionMatrix(model_borutized)
+
+```
+
+

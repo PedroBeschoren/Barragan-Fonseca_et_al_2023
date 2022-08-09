@@ -1,0 +1,206 @@
+---
+title: "3_differential_abundance"
+author: "Pedro"
+date: "8/9/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# 0 - load libraries and data
+```{r}
+
+#load necessary libraries
+library(phyloseq)
+library(ggplot2)
+library(DESeq2)
+library(pheatmap)
+library(viridisLite)
+library(metacoder)
+
+
+#load the phyloseq objects containing all microbiome data
+load("./Code/phyloseq_objects.RData")
+
+```
+
+
+
+# 1 - create deseq object and calculate differential abudnaces
+```{r}
+
+
+# make list of deseqed phyloseq objects
+deseq_obj<- phyloseq_to_deseq2(physeq_goodSamples, ~ Treatment)
+deseq_obj<- DESeq(deseq_obj, test="Wald", fitType="parametric")
+
+
+
+```
+
+
+
+# 2 - define pairwise comparisons, extract  with custom function
+```{r}
+
+physeq_goodSamples@sam_data$Treatment
+
+# make a list of the pairwise comparisons you want to run according the treatment ; 
+#  positive fold change: higher in fist factor (treatment) / negative fold change: higher in second factor(control)
+pairwise_comparison<-list(
+c("Treatment", "BSF", "C"),
+c("Treatment", "BSF", "CHT"), 
+c("Treatment", "BSF", "HC"),
+c("Treatment", "BSF", "MW"),
+c("Treatment", "BSF", "OF"),
+c("Treatment", "C", "CHT"),
+c("Treatment", "C", "HC"),
+c("Treatment", "C", "MW"),
+c("Treatment", "C", "OF"),
+c("Treatment", "CHT", "HC"),
+c("Treatment", "CHT", "MW"),
+c("Treatment", "CHT", "OF"),
+c("Treatment", "HC", "MW"),
+c("Treatment", "HC", "OF"),
+c("Treatment", "MW", "OF"))
+
+
+
+
+# define function to extract pairwise comparsions p valyes, showing ASVs that are different and its taxonomeis
+build_sig_tab<-function (deseq_obj, contrast_cha_vector){
+
+  alpha<-0.05 # defines the alpha level for p adjustment to control for false discovery rate
+  min_fold<-2 # defines minimum fold difference in counts to classify an OTU as differential
+
+
+  list_res <- lapply(contrast_cha_vector, function(x) 
+    results(deseq_obj, contrast=x, cooksCutoff = FALSE))
+
+
+  list_sigtab <- lapply(list_res, function (x) 
+    x[which(x$padj < alpha), ]) # cuts results based on alpha for FDR
+  
+   list_sigtab <- lapply(list_sigtab, function (x) 
+    x[which(abs(x$log2FoldChange) > min_fold), ]) # cuts results based on minimum fold change
+   
+  list_sigtab <- lapply(list_sigtab, function (x) 
+    x[order(x$padj),])  # sorts lists of OTUs based on p values of pairwise abundance differences
+  
+  
+  
+  
+  
+  
+  # this silenced chuck allows you to limit the number of OTUs accepted as diferential in each comparision. note that if you define the minimum number as 1:40 (1 to 40) but you only hace 39 differentially abundannt OTUs the function will crash and you will not have these results. just remove the hashtags below to limt to 3 top differentially abundant OTUs
+  
+    # max_OTU_n<-1:3 # defines the maximum number of OTUs to include in each pairwise coparison
+    # list_sigtab <- lapply(list_sigtab, function (x) 
+    # x[max_OTU_n,])  # cuts results based on maximum numer of OTUs counted as differential
+  
+  
+  
+  
+  
+  
+    
+  list_sigtab <- lapply(list_sigtab, function (x) 
+    cbind(as(x, "data.frame"), as(tax_table(physeq_goodSamples)[rownames(x), ], "matrix"))) # here we only colect the taxa names from the original, unsplit, phyloseq object
+  return(list_sigtab)
+  }
+
+# run custom function
+sigtab_results<-build_sig_tab(deseq_obj = deseq_obj,contrast_cha_vector = pairwise_comparison)
+
+# extract ASV names of the differentially abundant ASVs
+differentialy_abundant_ASVs<-lapply(sigtab_results, function (x) rownames(x))%>% # extract the rownames from the list, then....
+unlist(use.names=FALSE)%>% # flatten the rowname (OTU ID) list, ignoring the names of the lists, then...
+  unique() # remove duplications of the same OTUs
+
+
+
+```
+
+# 3 - plot bi-clsuter heatmap
+```{r}
+
+# finally, build the heatmap
+# note that the log change calculations are based on the full, unsplit and unlisted deseq2 object (that is, our complete dataset)
+ntb <- normTransform(deseq_obj) # defaults to log2(x+1)
+log2.norm.countsb <- assay(ntb)[differentialy_abundant_ASVs, ] #these colnames should match rownames(df)
+df <- as.data.frame(colData(deseq_obj)[,c("Treatment")])
+row.names(df)<-row.names(as.data.frame(colData(deseq_obj)))
+df_row <- as.data.frame((tax_table(physeq_goodSamples))[,c("Phylum")]) # here you can change to Class, ORder, etc...S
+pheatmap::pheatmap(log2.norm.countsb, color=viridis(24), annotation_col=df, annotation_row=df_row, main="log2(counts + 1)", 
+                   scale="none", fontsize_row = 3, fontsize_col = 8)
+
+
+```
+
+# 4 - Plot a matrix of heat tree to check pairwise comparisons
+
+```{r}
+# first, get only the ASVs detected as differentially abundant by Deseq2
+goodSamples_heatTrees<-prune_taxa(taxa = differentialy_abundant_ASVs, physeq_goodSamples_rarefied)
+
+#remove unecessary taxonomic indo (dada2id, "S__" and" above_selected)
+tax_table(goodSamples_heatTrees )<-tax_table(goodSamples_heatTrees)[,1:6]
+
+# let's remove the "r__"ranks from the taxonomy, they can be useful but will polute our plot
+tax_table(goodSamples_heatTrees )[, colnames(tax_table(goodSamples_heatTrees ))] <- gsub(tax_table(goodSamples_heatTrees )[, colnames(tax_table(goodSamples_heatTrees ))],     pattern = "[a-z]__", replacement = "")
+
+# transform from phyloseq to  taxmap object
+neutral_metacoder_BO<-parse_phyloseq(goodSamples_heatTrees )
+
+#get abundance per taxon
+neutral_metacoder_BO$data$tax_abund<-calc_taxon_abund(obj = neutral_metacoder_BO, 
+                                      data = "otu_table",
+                                      cols = neutral_metacoder_BO$data$sample_data$sample_id)
+#get occuence of per sample type
+neutral_metacoder_BO$data$tax_occ <- calc_n_samples(obj = neutral_metacoder_BO, 
+                                    data = "tax_abund", 
+                                    groups = neutral_metacoder_BO$data$sample_data$Treatment, 
+                                    cols = neutral_metacoder_BO$data$sample_data$sample_id)
+
+
+############################## now, let's plot a matrix heat tree for the MeJA comparisons
+
+
+neutral_metacoder_BO$data$diff_table <- compare_groups(obj = neutral_metacoder_BO,
+                                      dataset = "tax_abund",
+                                      cols = neutral_metacoder_BO$data$sample_data$sample_id, # What columns of sample data to use
+                                      groups = neutral_metacoder_BO$data$sample_data$Treatment) # What category each sample is assigned to
+
+# set differental log ratio to 0 based on adjusted p values
+#neutral_metacoder_BO$data$diff_table$log2_median_ratio[neutral_metacoder_BO$data$diff_table$wilcox_p_value > 0.05] <- 0
+
+
+#check this object to find terminal leaves that are consistent across treatments, then...
+# highlight a taxonomic rank with lots of members being differentially selected
+neutral_metacoder_BO$data$diff_table$treatment_1
+tail(neutral_metacoder_BO$data$otu_table)
+
+
+
+#plot matrix tree
+set.seed(1)
+heat_tree_matrix(neutral_metacoder_BO,
+                 data = "diff_table",
+                 node_size = n_obs, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
+                 node_label = taxon_names,
+                 node_color = log2_median_ratio, # A column from `obj$data$diff_table`
+                 node_color_range = diverging_palette(), # The built-in palette for diverging data
+                 node_color_trans = "linear", # The default is scaled by circle area
+                 node_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
+                 edge_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
+                 label_small_trees = TRUE,
+                 node_label_size = n_obs/10,
+                 node_size_axis_label = "Size: Number of OTUs",
+                 node_color_axis_label = "Color: Log2 ratio median proportions",
+                 layout = "davidson-harel", # The primary layout algorithm
+                 initial_layout = "reingold-tilford", # The layout algorithm that initializes node locations
+                 output_file = "./Results/differential_heat_tree.pdf") # Saves the plot as a pdf file
+
+
+```
+
