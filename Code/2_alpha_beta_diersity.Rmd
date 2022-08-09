@@ -1,0 +1,151 @@
+---
+title: "2_alpha_beta_diersity"
+author: "Pedro"
+date: "8/9/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# 0 - Load libraries & data
+
+```{r}
+
+#load necessary libraries
+library(phyloseq)
+library(ggplot2)
+library(vegan)
+library(EcolUtils)
+library(microbiome)
+library(car)
+library(agricolae)
+
+#load the phyloseq objects containing all microbiome data
+load("./Code/phyloseq_objects.RData")
+
+```
+
+
+# 1 - Check beta diversity in a NMDS ordination
+Some clustering and treatment effects are evident!
+```{r}
+
+# Let's make a Non-Metric Multidimensional Scaling (NMDS) of all our samples based on CSS normalization
+nmds   <- phyloseq::ordinate(physeq_goodSamples_CSS, 
+                             method ="NMDS", # this method has few assumptions and readly accepts different data structures
+                             distance="bray", # bray-curtis distance is suitable for sparse data - such as the zero-inflated microbiome data we have
+                             try=200, # number of iterations
+                             autotransform=TRUE) # automatically transforms your data, if needed. reduces weight of outliers
+                              #weakties = FALSE prevests tress from colapsing into zero
+
+plot_ordination(physeq = physeq_goodSamples_CSS, 
+                ordination = nmds, 
+                color= "Treatment")+ 
+  theme_classic() +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5)) +
+  theme(legend.position="right")
+
+```
+
+# 2 - check beta dispersion
+beta dispersion is like multivatite homogeniety of variances. just like you can't compare properly very small error bars with very large error bars, you should check fi the spread of the data clouds is similar per treatment
+```{r}
+
+
+#calculates beta dispersions of the treatment effects
+beta_disper<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray"),
+                         group = sample_data(physeq_goodSamples_CSS)[["Treatment"]]) 
+
+
+# check if ebta dispersions are significantly differente
+beta_disper_calc<-anova(beta_disper, permutations = 999)
+
+# saves the p value of the dispersion test
+p_dispersion<-beta_disper_calc[[5]][1] 
+
+#plots a spdier plot (PCoA) with centroids
+plot(beta_disper,
+     main = "Beta Dispersion",
+     sub = p_dispersion,
+     xlab="p value for homogeniety of multivariate variances:")
+
+
+
+```
+
+# 3 - run PERMANOVA and post-hoc test
+We see significat treatment effects, with clear paiwise distinctions
+
+```{r}
+# Running the permanova with vegan::adonis2() on a single phyloseq object is very simple
+metadata<-as(sample_data(physeq_goodSamples_CSS),"data.frame")
+#let's first define permitation design with permute::how()
+perm2<-how(# define blocks
+           nperm=999)# n of permutations
+
+# now let's calculate the permanova
+adonis2(phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray") # this is your distance matrix of OTU abundances 
+        ~ Treatment, # this is your model
+        permutations=how(nperm=999), # we jsut defined the permutation settings above, you place them here
+        data = metadata) # metadata for the community matrix
+
+
+# post-hoc
+adonis.pair(dist.mat= phyloseq::distance(otu_table(physeq_goodSamples_CSS), method="bray"),
+              Factor= as.factor(as(phyloseq::sample_data(physeq_goodSamples_CSS),"data.frame")$Treatment))
+```
+
+
+# 4 - Alpha diversity calculations & plot
+
+
+```{r}
+
+
+#Calculate richness for root and soil
+calculated_diversity<-microbiome::diversity(physeq_goodSamples_CSS)
+
+n_sequences<-sample_sums(physeq_goodSamples_CSS)
+calculated_diversity$n_sequences<-n_sequences
+
+#### add diversity metrics to mapping file of phyloseq objects
+# we do this so we can perform anovas, acess metadat, make nicer plots, etc
+merg_to_ps<-sample_data(calculated_diversity) # makes the diversity calculations  sample_data for phyloseq oject...
+calculated_diversity_df<-as(sample_data(merge_phyloseq(physeq_goodSamples_CSS,merg_to_ps)),"data.frame") # forces sample data of updated phyloseq object into a dataframe
+
+#Lets see this on a simple boxplot for Shannon diversity index
+ggplot(calculated_diversity_df, aes(x =Treatment, y = fisher, fill =Treatment ))+
+  geom_boxplot()+
+  theme_bw()+
+  labs(title = "Fisher diversity indexes")
+
+
+
+
+```
+
+
+
+# 5 - alpha diversity tests
+Shannon diversity has a bit of heterogeniety per treatent:  p= 0.051. Fisher diversity instead has p=0.90 and the pattern in teh plot is the same. stats and post-hoc of shannon and fisher are similar.  let's use fisher diversities here due to lower heterogeniety
+
+
+```{r}
+# chech homogeniety of variances
+leveneTest((shannon) ~ Treatment, data = calculated_diversity_df) 
+leveneTest((fisher) ~ Treatment, data = calculated_diversity_df) 
+
+
+# anova test
+anova_fisher<-aov(fisher ~ Treatment, data = calculated_diversity_df)
+
+# get p values
+summary(anova_fisher)
+
+# post-hoc, both Tukey and Least Significat Difference
+HSD.test(y = anova_shannon, "Treatment", group=TRUE, console=TRUE)
+LSD.test(y = anova_shannon, "Treatment", group=TRUE, console=TRUE)
+
+
+```
+
