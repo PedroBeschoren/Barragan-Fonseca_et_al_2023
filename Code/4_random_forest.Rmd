@@ -18,7 +18,7 @@ library(dplyr)
 library(Boruta)
 library(caret)
 library(randomForest)
-
+library(metacoder)
 
 
 #load the phyloseq objects containing all microbiome data
@@ -154,7 +154,7 @@ Treatment ~ ASV_2 + ASV_3 + ASV_5 + ASV_6 + ASV_9 + ASV_10 +
 
 
 # first, get only the ASVs detected as differentially abundant by Deseq2
-rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_rf_important_rarefied)
+rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_goodSamples_rarefied)
 
 #remove unecessary taxonomic indo (dada2id, "S__" and" above_selected)
 tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:6]
@@ -212,7 +212,7 @@ heat_tree_matrix(rf_important_metacoder,
                  node_color_axis_label = "Color: Log2 ratio median proportions",
                  layout = "davidson-harel", # The primary layout algorithm
                  initial_layout = "reingold-tilford", # The layout algorithm that initializes node locations
-                 output_file = "./Results/differential_heat_tree.pdf") # Saves the plot as a pdf file
+                 output_file = "./Results/RF_features_heat_tree.pdf") # Saves the plot as a pdf file
 
 
 ```
