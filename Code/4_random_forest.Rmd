@@ -6,13 +6,23 @@ output: html_document
 editor_options: 
   chunk_output_type: console
 ---
+
+
 ```{r}
+
+#load necessary libraries
+library(phyloseq)
+library(ggplot2)
 library(tibble)
 library(dplyr)
 library(Boruta)
 library(caret)
 library(randomForest)
 
+
+
+#load the phyloseq objects containing all microbiome data
+load("./Code/phyloseq_objects.RData")
 ```
 
 
@@ -48,20 +58,24 @@ Boruta_input$Treatment<-as.factor(Boruta_input$Treatment)
 ```
 
 
-# run Boruta to define imporntat features
+# 2 - run Boruta to define imporntat features
 ```{r}
 #run borura
 set.seed(456987)
 Boruta_output<- Boruta(Treatment~.,   
                        data = Boruta_input,
                        doTrace=2, 
-                       maxRuns = 50, 
-                       ntree = 100) #increase the maximum number of runs to decrease the number of tenttively important OTUs. increase the number of trees to increase precision. decrease either to reduce computational time.
+                       maxRuns = 1000, 
+                       ntree = 8000) #increase the maximum number of runs to decrease the number of tenttively important OTUs. increase the number of trees to increase precision. decrease either to reduce computational time.
+
+#save the otuput, as it takes some 15 minutes to calculate
+save(Boruta_output, file = "./Results/Boruta_output.RData")
+
 ```
 
 
 
-# 7.1.1 visualize boruta results 
+# 3 - check boruta results/output
 
 ```{r boruta}
 
@@ -80,9 +94,15 @@ boruta_plot<- plot(fixed_boruta_objt)
 #make a plot showing imporance and classification of features over iteration time
 boruta_history<-  plotImpHistory(fixed_boruta_objt)
 
+# define ASVs tagged as important by boruta
+important_ASVs<-filter(attStats(fixed_boruta_objt), decision=="Confirmed")%>%
+    rownames()
+
+
+
 ```
 
-# calculate precision and kappa with confusion matrixes
+# 4 - calculate precision and kappa with confusion matrixes
 ```{r}
 
 
@@ -93,16 +113,107 @@ set.seed(4551)
 #define training model
 train.control <- trainControl(method = "repeatedcv", # set trainig/data split controls for the train function
                               number = 5, 
-                              repeats = 50)
+                              repeats = 200)
 # calculate precision
 model_borutized <- train(boruta_formula, 
                          data = Boruta_input, 
                          method = "rf", #execute training based on random forest; model is based on borut formula of important features
-               trControl = train.control, ntree=10)
+               trControl = train.control, ntree=1000)
 
 # plot confusion matrix
 confusionMatrix(model_borutized)
 
+# save teh output, as it takes ~30 min to calculate
+save(model_borutized, file = "./Results/model_borutized.RData")
+
 ```
 
+# 5 -Visualize the features on a heat tree matrix
+
+Just for the record, these are teh ASVs confirmed as importat by boruta:
+
+Treatment ~ ASV_2 + ASV_3 + ASV_5 + ASV_6 + ASV_9 + ASV_10 + 
+    ASV_12 + ASV_13 + ASV_15 + ASV_18 + ASV_19 + ASV_23 + ASV_26 + 
+    ASV_28 + ASV_30 + ASV_36 + ASV_37 + ASV_38 + ASV_40 + ASV_44 + 
+    ASV_47 + ASV_51 + ASV_65 + ASV_72 + ASV_81 + ASV_82 + ASV_90 + 
+    ASV_94 + ASV_97 + ASV_108 + ASV_120 + ASV_122 + ASV_127 + 
+    ASV_134 + ASV_142 + ASV_149 + ASV_154 + ASV_158 + ASV_161 + 
+    ASV_166 + ASV_172 + ASV_173 + ASV_176 + ASV_204 + ASV_223 + 
+    ASV_254 + ASV_261 + ASV_266 + ASV_268 + ASV_283 + ASV_294 + 
+    ASV_309 + ASV_341 + ASV_342 + ASV_346 + ASV_353 + ASV_365 + 
+    ASV_377 + ASV_384 + ASV_391 + ASV_399 + ASV_406 + ASV_433 + 
+    ASV_434 + ASV_442 + ASV_449 + ASV_457 + ASV_458 + ASV_511 + 
+    ASV_516 + ASV_518 + ASV_521 + ASV_549 + ASV_588 + ASV_629 + 
+    ASV_646 + ASV_660 + ASV_688 + ASV_710 + ASV_729 + ASV_773 + 
+    ASV_797 + ASV_808 + ASV_832 + ASV_858 + ASV_961 + ASV_1026 + 
+    ASV_1094 + ASV_1097 + ASV_1110 + ASV_1215 + ASV_1516 + ASV_1570 + 
+    ASV_1708
+
+```{r}
+
+
+
+# first, get only the ASVs detected as differentially abundant by Deseq2
+rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_rf_important_rarefied)
+
+#remove unecessary taxonomic indo (dada2id, "S__" and" above_selected)
+tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:6]
+
+# let's remove the "r__"ranks from the taxonomy, they can be useful but will polute our plot
+tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))] <- gsub(tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))],     pattern = "[a-z]__", replacement = "")
+
+# transform from phyloseq to  taxmap object
+rf_important_metacoder<-parse_phyloseq(rf_important_heatTrees )
+
+#get abundance per taxon
+rf_important_metacoder$data$tax_abund<-calc_taxon_abund(obj = rf_important_metacoder, 
+                                      data = "otu_table",
+                                      cols = rf_important_metacoder$data$sample_data$sample_id)
+#get occuence of per sample type
+rf_important_metacoder$data$tax_occ <- calc_n_samples(obj = rf_important_metacoder, 
+                                    data = "tax_abund", 
+                                    groups = rf_important_metacoder$data$sample_data$Treatment, 
+                                    cols = rf_important_metacoder$data$sample_data$sample_id)
+
+
+############################## now, let's plot a matrix heat tree for the MeJA comparisons
+
+
+rf_important_metacoder$data$diff_table <- compare_groups(obj = rf_important_metacoder,
+                                      dataset = "tax_abund",
+                                      cols = rf_important_metacoder$data$sample_data$sample_id, # What columns of sample data to use
+                                      groups = rf_important_metacoder$data$sample_data$Treatment) # What category each sample is assigned to
+
+# set differental log ratio to 0 based on adjusted p values
+#rf_important_metacoder$data$diff_table$log2_median_ratio[rf_important_metacoder$data$diff_table$wilcox_p_value > 0.05] <- 0
+
+
+#check this object to find terminal leaves that are consistent across treatments, then...
+# highlight a taxonomic rank with lots of members being differentially selected
+rf_important_metacoder$data$diff_table$treatment_1
+tail(rf_important_metacoder$data$otu_table)
+
+
+
+#plot matrix tree
+set.seed(1)
+heat_tree_matrix(rf_important_metacoder,
+                 data = "diff_table",
+                 node_size = n_obs, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
+                 node_label = taxon_names,
+                 node_color = log2_median_ratio, # A column from `obj$data$diff_table`
+                 node_color_range = diverging_palette(), # The built-in palette for diverging data
+                 node_color_trans = "linear", # The default is scaled by circle area
+                 node_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
+                 edge_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
+                 label_small_trees = TRUE,
+                 node_label_size = n_obs/10,
+                 node_size_axis_label = "Size: Number of OTUs",
+                 node_color_axis_label = "Color: Log2 ratio median proportions",
+                 layout = "davidson-harel", # The primary layout algorithm
+                 initial_layout = "reingold-tilford", # The layout algorithm that initializes node locations
+                 output_file = "./Results/differential_heat_tree.pdf") # Saves the plot as a pdf file
+
+
+```
 

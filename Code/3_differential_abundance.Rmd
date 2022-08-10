@@ -150,41 +150,41 @@ tax_table(goodSamples_heatTrees )<-tax_table(goodSamples_heatTrees)[,1:6]
 tax_table(goodSamples_heatTrees )[, colnames(tax_table(goodSamples_heatTrees ))] <- gsub(tax_table(goodSamples_heatTrees )[, colnames(tax_table(goodSamples_heatTrees ))],     pattern = "[a-z]__", replacement = "")
 
 # transform from phyloseq to  taxmap object
-neutral_metacoder_BO<-parse_phyloseq(goodSamples_heatTrees )
+deseq2_metacoder<-parse_phyloseq(goodSamples_heatTrees )
 
 #get abundance per taxon
-neutral_metacoder_BO$data$tax_abund<-calc_taxon_abund(obj = neutral_metacoder_BO, 
+deseq2_metacoder$data$tax_abund<-calc_taxon_abund(obj = deseq2_metacoder, 
                                       data = "otu_table",
-                                      cols = neutral_metacoder_BO$data$sample_data$sample_id)
+                                      cols = deseq2_metacoder$data$sample_data$sample_id)
 #get occuence of per sample type
-neutral_metacoder_BO$data$tax_occ <- calc_n_samples(obj = neutral_metacoder_BO, 
+deseq2_metacoder$data$tax_occ <- calc_n_samples(obj = deseq2_metacoder, 
                                     data = "tax_abund", 
-                                    groups = neutral_metacoder_BO$data$sample_data$Treatment, 
-                                    cols = neutral_metacoder_BO$data$sample_data$sample_id)
+                                    groups = deseq2_metacoder$data$sample_data$Treatment, 
+                                    cols = deseq2_metacoder$data$sample_data$sample_id)
 
 
 ############################## now, let's plot a matrix heat tree for the MeJA comparisons
 
 
-neutral_metacoder_BO$data$diff_table <- compare_groups(obj = neutral_metacoder_BO,
+deseq2_metacoder$data$diff_table <- compare_groups(obj = deseq2_metacoder,
                                       dataset = "tax_abund",
-                                      cols = neutral_metacoder_BO$data$sample_data$sample_id, # What columns of sample data to use
-                                      groups = neutral_metacoder_BO$data$sample_data$Treatment) # What category each sample is assigned to
+                                      cols = deseq2_metacoder$data$sample_data$sample_id, # What columns of sample data to use
+                                      groups = deseq2_metacoder$data$sample_data$Treatment) # What category each sample is assigned to
 
 # set differental log ratio to 0 based on adjusted p values
-#neutral_metacoder_BO$data$diff_table$log2_median_ratio[neutral_metacoder_BO$data$diff_table$wilcox_p_value > 0.05] <- 0
+#deseq2_metacoder$data$diff_table$log2_median_ratio[deseq2_metacoder$data$diff_table$wilcox_p_value > 0.05] <- 0
 
 
 #check this object to find terminal leaves that are consistent across treatments, then...
 # highlight a taxonomic rank with lots of members being differentially selected
-neutral_metacoder_BO$data$diff_table$treatment_1
-tail(neutral_metacoder_BO$data$otu_table)
+deseq2_metacoder$data$diff_table$treatment_1
+tail(deseq2_metacoder$data$otu_table)
 
 
 
 #plot matrix tree
 set.seed(1)
-heat_tree_matrix(neutral_metacoder_BO,
+heat_tree_matrix(deseq2_metacoder,
                  data = "diff_table",
                  node_size = n_obs, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
                  node_label = taxon_names,
