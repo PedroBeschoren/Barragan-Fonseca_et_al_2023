@@ -120,7 +120,7 @@ rarecurve(t(as.data.frame(otu_table(physeq_filtered))),
 rarecurve(t(as.data.frame(otu_table(physeq_goodSamples))), 
           label = FALSE, 
           step = 200,
-          main="Rarefaction at 4000 reads, 7+ occurences", ylab = "Number of ASVs", xlab = "Number of DNA reads",
+          main="Rarefaction at 40000 reads, 7+ occurences", ylab = "Number of ASVs", xlab = "Number of DNA reads",
           abline(v = min(sample_sums(physeq_goodSamples)), col="red", lwd=3, lty=2))
 
 
@@ -128,14 +128,14 @@ rarecurve(t(as.data.frame(otu_table(physeq_goodSamples))),
 rarecurve(t(as.data.frame(otu_table(physeq_filtered))), 
           label = FALSE, 
           step = 200,
-          main="Rarefaction at 4000 reads, 7+ occurences, 6 of 46 samples removed", ylab = "Number of ASVs", xlab = "Number of DNA reads",
+          main="Rarefaction at 40000 reads, 7+ occurences, 6 of 46 samples removed", ylab = "Number of ASVs", xlab = "Number of DNA reads",
           abline(v = min(sample_sums(physeq_goodSamples)), col="red", lwd=3, lty=2))
 
 
 
 ```
 
-# 6 normalize dataset
+# 6 - normalize dataset
 For aplha diversity, we should use rarefied data, with the deepenst rarefaction we can have while losing the elast amount fo samples as possible
 for beta diversity we can use CSS normalization instead
 
