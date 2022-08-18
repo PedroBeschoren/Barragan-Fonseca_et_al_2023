@@ -143,8 +143,8 @@ anova_fisher<-aov(fisher ~ Treatment, data = calculated_diversity_df)
 summary(anova_fisher)
 
 # post-hoc, both Tukey and Least Significat Difference
-HSD.test(y = anova_shannon, "Treatment", group=TRUE, console=TRUE)
-LSD.test(y = anova_shannon, "Treatment", group=TRUE, console=TRUE)
+HSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE)
+LSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE)
 
 
 ```
