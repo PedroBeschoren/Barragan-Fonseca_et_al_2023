@@ -32,7 +32,7 @@ Some clustering and treatment effects are evident!
 
 # Let's make a Non-Metric Multidimensional Scaling (NMDS) of all our samples based on CSS normalization
 nmds   <- phyloseq::ordinate(physeq_goodSamples_CSS, 
-                             method ="NMDS", # this method has few assumptions and readly accepts different data structures
+                             method ="PCoA", # this method has few assumptions and readly accepts different data structures
                              distance="bray", # bray-curtis distance is suitable for sparse data - such as the zero-inflated microbiome data we have
                              try=200, # number of iterations
                              autotransform=TRUE) # automatically transforms your data, if needed. reduces weight of outliers
@@ -103,15 +103,15 @@ adonis.pair(dist.mat= phyloseq::distance(otu_table(physeq_goodSamples_CSS), meth
 
 
 #Calculate richness for root and soil
-calculated_diversity<-microbiome::diversity(physeq_goodSamples_CSS)
+calculated_diversity<-microbiome::diversity(physeq_goodSamples_rarefied)
 
-n_sequences<-sample_sums(physeq_goodSamples_CSS)
+n_sequences<-sample_sums(physeq_goodSamples_rarefied)
 calculated_diversity$n_sequences<-n_sequences
 
 #### add diversity metrics to mapping file of phyloseq objects
 # we do this so we can perform anovas, acess metadat, make nicer plots, etc
 merg_to_ps<-sample_data(calculated_diversity) # makes the diversity calculations  sample_data for phyloseq oject...
-calculated_diversity_df<-as(sample_data(merge_phyloseq(physeq_goodSamples_CSS,merg_to_ps)),"data.frame") # forces sample data of updated phyloseq object into a dataframe
+calculated_diversity_df<-as(sample_data(merge_phyloseq(physeq_goodSamples_rarefied,merg_to_ps)),"data.frame") # forces sample data of updated phyloseq object into a dataframe
 
 #Lets see this on a simple boxplot for Shannon diversity index
 ggplot(calculated_diversity_df, aes(x =Treatment, y = fisher, fill =Treatment ))+
@@ -132,7 +132,6 @@ Shannon diversity has a bit of heterogeniety per treatent:  p= 0.051. Fisher div
 
 ```{r}
 # chech homogeniety of variances
-leveneTest((shannon) ~ Treatment, data = calculated_diversity_df) 
 leveneTest((fisher) ~ Treatment, data = calculated_diversity_df) 
 
 
@@ -143,7 +142,6 @@ anova_fisher<-aov(fisher ~ Treatment, data = calculated_diversity_df)
 summary(anova_fisher)
 
 # post-hoc, both Tukey and Least Significat Difference
-HSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE)
 LSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE)
 
 
