@@ -7,6 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
+# 0 - Load libraries & data
 
 ```{r}
 
@@ -98,7 +99,9 @@ boruta_history<-  plotImpHistory(fixed_boruta_objt)
 important_ASVs<-filter(attStats(fixed_boruta_objt), decision=="Confirmed")%>%
     rownames()
 
-
+#get boruta stats of ASVs confirmed to be important
+rf_importance_byOTU<-filter(attStats(fixed_boruta_objt), decision=="Confirmed")%>%
+    rownames_to_column(var = "otu_id")
 
 ```
 
@@ -128,7 +131,7 @@ save(model_borutized, file = "./Results/model_borutized.RData")
 
 ```
 
-# 5 -Visualize the features on a heat tree matrix
+## 5 -Visualize the features on a heat tree matrix
 
 Just for the record, these are teh ASVs confirmed as importat by boruta:
 
@@ -156,8 +159,14 @@ Treatment ~ ASV_2 + ASV_3 + ASV_5 + ASV_6 + ASV_9 + ASV_10 +
 # first, get only the ASVs detected as differentially abundant by Deseq2
 rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_goodSamples_rarefied)
 
+
+#adds ASV IDs as the "species"
+tax_table(rf_important_heatTrees)[,7]<-important_ASVs
+
 #remove unecessary taxonomic indo (dada2id, "S__" and" above_selected)
-tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:6]
+tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:7]
+
+
 
 # let's remove the "r__"ranks from the taxonomy, they can be useful but will polute our plot
 tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))] <- gsub(tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))],     pattern = "[a-z]__", replacement = "")
@@ -185,9 +194,9 @@ rf_important_metacoder$data$diff_table <- compare_groups(obj = rf_important_meta
                                       groups = rf_important_metacoder$data$sample_data$Treatment) # What category each sample is assigned to
 
 # set differental log ratio to 0 based on adjusted p values
-#rf_important_metacoder$data$diff_table$log2_median_ratio[rf_important_metacoder$data$diff_table$wilcox_p_value > 0.05] <- 0
+rf_important_metacoder$data$diff_table$log2_median_ratio[rf_important_metacoder$data$diff_table$wilcox_p_value > 0.05] <- 0
 
-
+length(rf_important_metacoder$data$diff_table$log2_median_ratio)
 #check this object to find terminal leaves that are consistent across treatments, then...
 # highlight a taxonomic rank with lots of members being differentially selected
 rf_important_metacoder$data$diff_table$treatment_1
@@ -195,24 +204,365 @@ tail(rf_important_metacoder$data$otu_table)
 
 
 
+
+
+
+
+
+
+########### let's add RF importance to the metacoder object######
+
+# add metacoder taxon ID to RF importnat OTUs
+rf_importance_byOTU$taxon_id<-rf_important_metacoder$data$otu_table$taxon_id
+
+# add RF importance to metacoder object
+rf_important_metacoder$data$RF_importance<-tibble(rf_importance_byOTU[,c(1:2,8)])
+
+#get summed importance per taxon
+rf_important_metacoder$data$RF_importance_nodes<-calc_taxon_abund(obj = rf_important_metacoder, 
+                                      data = "RF_importance")
+
+#define number of subtaxa
+subtaxa_number<-n_subtaxa(rf_important_metacoder)+1
+
+# transform zeros into 1 so you don't try to divide by zero on the next step
+subtaxa_number[subtaxa_number==0]<-1
+
+# add this subtaxa number to part of the metacoder tree object
+rf_important_metacoder$data$RF_importance_nodes$subtaxa_number<-subtaxa_number
+
+# divide the summed meam importance y the number of subtaxa. ASV nodes shuold ahve the same importance as the original object
+rf_important_metacoder$data$RF_importance_nodes$mean_meamImp_per_taxa<-
+  rf_important_metacoder$data$RF_importance_nodes$meanImp /
+  rf_important_metacoder$data$RF_importance_nodes$subtaxa_number
+
+#define the minimum and maximum ASV importance to plot
+min_RF_importance<-min(rf_importance_byOTU$meanImp) 
+max_RF_importance<-max(rf_importance_byOTU$meanImp) 
+
+
+########### done! ######
+
+
+
+
+
+
+
+
+
+
+
+
 #plot matrix tree
 set.seed(1)
 heat_tree_matrix(rf_important_metacoder,
                  data = "diff_table",
-                 node_size = n_obs, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
+                 node_size = rf_important_metacoder$data$RF_importance_nodes$mean_meamImp_per_taxa, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
                  node_label = taxon_names,
                  node_color = log2_median_ratio, # A column from `obj$data$diff_table`
                  node_color_range = diverging_palette(), # The built-in palette for diverging data
                  node_color_trans = "linear", # The default is scaled by circle area
                  node_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
                  edge_color_interval = c(-3, 3), # The range of `log2_median_ratio` to display
+                 overlap_avoidance = 1.5,
+                node_size_interval = c(min_RF_importance, max_RF_importance), # define node size range according RF importances
+                 node_label_size_range = c(0.005, 0.015),
+                 node_size_range = c(0.009, 0.03),
                  label_small_trees = TRUE,
-                 node_label_size = n_obs/10,
                  node_size_axis_label = "Size: Number of OTUs",
                  node_color_axis_label = "Color: Log2 ratio median proportions",
                  layout = "davidson-harel", # The primary layout algorithm
                  initial_layout = "reingold-tilford", # The layout algorithm that initializes node locations
                  output_file = "./Results/RF_features_heat_tree.pdf") # Saves the plot as a pdf file
+
+
+```
+
+
+
+
+
+##5b - barplot of rf features
+```{r}
+
+
+
+
+#get boruta stats of ASVs confirmed to be important
+rf_importance_byOTU<-filter(attStats(fixed_boruta_objt), decision=="Confirmed")%>%
+    rownames_to_column(var = "OTU")
+
+#sort ASVs by importance
+rf_importance_byOTU<-rf_importance_byOTU[order(rf_importance_byOTU$meanImp, decreasing = TRUE),]
+
+
+#turn ps object into a dataframe
+melted_ps<- psmelt(rf_important_heatTrees)
+
+ # join melted ps object created above with the boruta stats
+ rf_ASVs_df<-left_join(melted_ps,rf_importance_byOTU)
+ 
+
+rf_ASVs_df$OTU<-base::factor(rf_ASVs_df$OTU, levels = c(rf_importance_byOTU$OTU))
+
+# quick plot bar with relative abudances, for a quick overview of dity data
+
+ggplot(data=rf_ASVs_df, aes(x=OTU, y =log(Abundance)))+
+  geom_boxplot(aes())+
+  scale_fill_hue()+
+  theme_bw()+
+  theme(axis.title.x = element_blank())+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) 
+
+
+ggplot(data=rf_ASVs_df, aes(x=Genus, y =medianImp ))+
+  geom_boxplot(aes())+
+  scale_fill_hue()+
+  theme_bw()+
+  theme(axis.title.x = element_blank())+
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) 
+
+table(rf_ASVs_df)
+
+
+
+```
+
+
+
+
+# 6 - run boruta to predict flowers
+```{r}
+
+
+#add the variable classification you want to predict with the random forest
+Boruta_input_flower<-
+  merge(select(metadata_rf,sample, "Numberofflowers"),
+        otu_cells_wide,
+        by = "sample",
+        all.y = TRUE)%>%
+  column_to_rownames(var = "sample")
+ 
+
+#check your df
+str(Boruta_input_flower[1:10,1:10]) # if your "Numberofflowers" is not numeric, boruta won't work
+Boruta_input_flower$Numberofflowers<-as.numeric(Boruta_input_flower$Numberofflowers)
+
+
+
+#run borura
+set.seed(456987)
+Boruta_output_flower<- Boruta(Numberofflowers~.,   
+                       data = Boruta_input_flower,
+                       doTrace=2, 
+                       maxRuns = 1000, 
+                       ntree = 8000) #increase the maximum number of runs to decrease the number of tenttively important OTUs. increase the number of trees to increase precision. decrease either to reduce computational time.
+
+
+#let Boruta decide if tentative features are ultimatetly important or not ; 
+fixed_boruta_flower_objt<- TentativeRoughFix(Boruta_output_flower)
+
+# get a list of ASVs defined as inportant by Boruta
+boruta_flower_ASV_list<- getSelectedAttributes(fixed_boruta_flower_objt)
+
+# get the list of ASVs defined as inportant by Boruta in formula format ; this can be used to calculate precision
+boruta_flower_formula<- getConfirmedFormula(fixed_boruta_flower_objt)
+
+# save teh output, as it takes ~10 min to calculate
+save(Boruta_output_flower, file = "./Results/Boruta_output_flower.RData")
+
+# define ASVs tagged as important by boruta
+important_ASVs<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
+    rownames()
+
+#get boruta stats of ASVs confirmed to be important
+rf_importance_byOTU<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
+    rownames_to_column(var = "otu_id")
+
+
+
+
+```
+
+
+## 7-  Visualize the flower features on a heat tree 
+
+```{r}
+# first, get only the ASVs detected as differentially abundant by Deseq2
+rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_goodSamples_rarefied)
+
+#adds ASV IDs as the "species"
+tax_table(rf_important_heatTrees)[,7]<-important_ASVs
+
+#remove unecessary taxonomic indo (dada2id, "S__" and" above_selected)
+tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:7]
+
+
+
+# let's remove the "r__"ranks from the taxonomy, they can be useful but will polute our plot
+tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))] <- gsub(tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))],     pattern = "[a-z]__", replacement = "")
+
+
+####################### now make it a metacoder object
+
+# transform from phyloseq to  taxmap object
+rf_important_metacoder<-parse_phyloseq(rf_important_heatTrees )
+
+
+
+#get abundance per taxon
+rf_important_metacoder$data$tax_abund<-calc_taxon_abund(obj = rf_important_metacoder, 
+                                      data = "otu_table",
+                                      cols = rf_important_metacoder$data$sample_data$sample_id)
+
+#get mean taxon abudance per group
+rf_important_metacoder$data$compare_group<-calc_group_mean(rf_important_metacoder, 
+                                                      "tax_abund",
+                                              rf_important_metacoder$data$sample_data$Treatment)
+
+#get occuence of per sample type
+rf_important_metacoder$data$tax_occ <- calc_n_samples(obj = rf_important_metacoder, 
+                                    data = "tax_abund", 
+                                    groups = rf_important_metacoder$data$sample_data$Treatment, 
+                                    cols = rf_important_metacoder$data$sample_data$sample_id)
+
+
+
+
+
+
+########### let's add RF importance to the metacoder object######
+
+# add metacoder taxon ID to RF importnat OTUs
+rf_importance_byOTU$taxon_id<-rf_important_metacoder$data$otu_table$taxon_id
+
+# add RF importance to metacoder object
+rf_important_metacoder$data$RF_importance<-tibble(rf_importance_byOTU[,c(1:2,8)])
+
+#get summed importance per taxon
+rf_important_metacoder$data$RF_importance_nodes<-calc_taxon_abund(obj = rf_important_metacoder, 
+                                      data = "RF_importance")
+
+#define number of subtaxa
+subtaxa_number<-n_subtaxa(rf_important_metacoder)+1
+
+# transform zeros into 1 so you don't try to divide by zero on the next step
+subtaxa_number[subtaxa_number==0]<-1
+
+# add this subtaxa number to part of the metacoder tree object
+rf_important_metacoder$data$RF_importance_nodes$subtaxa_number<-subtaxa_number
+
+# divide the summed meam importance y the number of subtaxa. ASV nodes shuold ahve the same importance as the original object
+rf_important_metacoder$data$RF_importance_nodes$mean_meamImp_per_taxa<-
+  rf_important_metacoder$data$RF_importance_nodes$meanImp /
+  rf_important_metacoder$data$RF_importance_nodes$subtaxa_number
+
+#define the minimum and maximum ASV importance to plot
+min_RF_importance<-min(rf_importance_byOTU$meanImp) 
+max_RF_importance<-max(rf_importance_byOTU$meanImp) 
+
+########### done! ######
+
+
+
+
+
+
+
+
+#plot heat tree
+set.seed(1)
+heat_tree(rf_important_metacoder,
+                 node_size = rf_important_metacoder$data$RF_importance_nodes$mean_meamImp_per_taxa, # n_obs is a function that calculates, in this case, the number of OTUs per taxon
+                 node_label = taxon_names,
+                 node_color = rowSums(rf_important_metacoder$data$tax_abund[,c(-1)]), # A column from `obj$data$diff_table`
+                node_size_interval = c(min_RF_importance, max_RF_importance), # define node size range according RF importances
+                 node_label_size_range = c(0.005, 0.015),
+                 node_size_range = c(0.009, 0.03),
+                 node_size_axis_label = "Size: RF importance OTU count",
+                 node_color_axis_label = "Color: Number of sequences",
+                 layout = "davidson-harel", # The primary layout algorithm
+                 initial_layout = "reingold-tilford", # The layout algorithm that initializes node locations
+                 output_file = "./Results/RF_features_flowers.pdf") # Saves the plot as a pdf file
+
+
+
+
+```
+
+
+
+## 8 - Calcualte precisiona nd kappa for boruta flowers
+
+
+```{r}
+
+
+
+# define random seed
+set.seed(4551)
+
+#define training model
+train.control <- trainControl(method = "repeatedcv", # set trainig/data split controls for the train function
+                              number = 5, 
+                              repeats = 200)
+# calculate precision
+model_borutized_flower <- train(boruta_flower_formula, 
+                         data = Boruta_input_flower, 
+                         method = "rf", #execute training based on random forest; model is based on borut formula of important features
+               trControl = train.control, ntree=1000)
+
+# plot confusion matrix
+predict(model_borutized_flower, Boruta_input_flower[,-1])
+confusionMatrix(model_borutized_flower)
+
+# save teh output, as it takes ~30 min to calculate
+save(model_borutized_flower, file = "./Results/model_borutized_flower.RData")
+
+```
+
+
+# 9 - run boruta to predict plant weight
+
+There are no imporntat atributes for plant weight! ASVs cannot determine planr biomass with Boruta RF 
+```{r}
+
+
+#add the variable classification you want to predict with the random forest
+Boruta_input_biomass<-
+  merge(select(metadata_rf,sample, "Fressabovegroundbiomass_g"),
+        otu_cells_wide,
+        by = "sample",
+        all.y = TRUE)%>%
+  column_to_rownames(var = "sample")
+ 
+
+#check your df
+str(Boruta_input_biomass[1:10,1:10]) # if your "Fressabovegroundbiomass_g" is not numeric, boruta won't work
+Boruta_input_biomass$Fressabovegroundbiomass_g<-as.numeric(Boruta_input_biomass$Fressabovegroundbiomass_g)
+
+
+
+#run borura
+set.seed(456987)
+Boruta_output_biomass<- Boruta(Fressabovegroundbiomass_g~.,   
+                       data = Boruta_input_biomass,
+                       doTrace=2, 
+                       maxRuns = 1000, 
+                       ntree = 20000) #increase the maximum number of runs to decrease the number of tenttively important OTUs. increase the number of trees to increase precision. decrease either to reduce computational time.
+
+
+```
+
+
+
+##5b - are differentially abudnant ASVs also RF importnat ASVs?
+
+```{r}
+
+# check a subset, there are many ways o do this
+boruta_ASV_list[boruta_ASV_list %in% differentialy_abundant_ASVs]
 
 
 ```
