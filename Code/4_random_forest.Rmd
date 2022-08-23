@@ -20,6 +20,7 @@ library(Boruta)
 library(caret)
 library(randomForest)
 library(metacoder)
+library(scorer) # several functions to evaluate regression models
 
 
 #load the phyloseq objects containing all microbiome data
@@ -373,11 +374,11 @@ boruta_flower_formula<- getConfirmedFormula(fixed_boruta_flower_objt)
 save(Boruta_output_flower, file = "./Results/Boruta_output_flower.RData")
 
 # define ASVs tagged as important by boruta
-important_ASVs<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
+important_flower_ASVs<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
     rownames()
 
 #get boruta stats of ASVs confirmed to be important
-rf_importance_byOTU<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
+rf_importance_flower_byOTU<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
     rownames_to_column(var = "otu_id")
 
 
@@ -386,7 +387,61 @@ rf_importance_byOTU<-filter(attStats(fixed_boruta_flower_objt), decision=="Confi
 ```
 
 
-## 7-  Visualize the flower features on a heat tree 
+
+
+# 7 - Calcualte precisiona and kappa for boruta flowers
+
+
+```{r}
+
+
+
+# define random seed
+set.seed(4551)
+
+#define training model
+train.control <- trainControl(method = "repeatedcv", # set trainig/data split controls for the train function
+                              number = 5, 
+                              repeats = 200)
+# calculate precision
+model_borutized_flower <- train(boruta_flower_formula, 
+                         data = Boruta_input_flower, 
+                         method = "rf", #execute training based on random forest; model is based on borut formula of important features
+               trControl = train.control, ntree=1000)
+
+# check mean_squared_error
+mean_squared_error(y_true = Boruta_input_flower$Numberofflowers,
+                     y_pred = predict(model_borutized_flower, Boruta_input_flower[,-1]))
+
+hist(squared_error(y_true = Boruta_input_flower$Numberofflowers,
+                     y_pred = predict(model_borutized_flower, Boruta_input_flower[,-1])))
+
+# check root mean_squared_error
+sqrt(mean_squared_error(y_true = Boruta_input_flower$Numberofflowers,
+                     y_pred = predict(model_borutized_flower, Boruta_input_flower[,-1])))
+
+#check explained variance
+r2_score(y_true = Boruta_input_flower$Numberofflowers,
+                     y_pred = predict(model_borutized_flower, Boruta_input_flower[,-1]))
+
+
+# visualize predicitons VS real data
+plot(Boruta_input_flower$Numberofflowers, predict(model_borutized_flower, Boruta_input_flower[,-1]))
+
+
+
+
+
+
+
+
+# save teh output, as it takes ~30 min to calculate
+save(model_borutized_flower, file = "./Results/model_borutized_flower.RData")
+
+```
+
+
+## 8 -  Visualize the flower features on a heat tree 
 
 ```{r}
 # first, get only the ASVs detected as differentially abundant by Deseq2
@@ -493,37 +548,10 @@ heat_tree(rf_important_metacoder,
 
 
 
-## 8 - Calcualte precisiona nd kappa for boruta flowers
-
-
-```{r}
 
 
 
-# define random seed
-set.seed(4551)
-
-#define training model
-train.control <- trainControl(method = "repeatedcv", # set trainig/data split controls for the train function
-                              number = 5, 
-                              repeats = 200)
-# calculate precision
-model_borutized_flower <- train(boruta_flower_formula, 
-                         data = Boruta_input_flower, 
-                         method = "rf", #execute training based on random forest; model is based on borut formula of important features
-               trControl = train.control, ntree=1000)
-
-# plot confusion matrix
-predict(model_borutized_flower, Boruta_input_flower[,-1])
-confusionMatrix(model_borutized_flower)
-
-# save teh output, as it takes ~30 min to calculate
-save(model_borutized_flower, file = "./Results/model_borutized_flower.RData")
-
-```
-
-
-# 9 - run boruta to predict plant weight
+# 9 - Run boruta to predict plant weight
 
 There are no imporntat atributes for plant weight! ASVs cannot determine planr biomass with Boruta RF 
 ```{r}
@@ -557,12 +585,21 @@ Boruta_output_biomass<- Boruta(Fressabovegroundbiomass_g~.,
 
 
 
-##5b - are differentially abudnant ASVs also RF importnat ASVs?
-
+#10 - check overlaps  in the highlighted data
 ```{r}
 
-# check a subset, there are many ways o do this
+# are differentially abudnant ASVs also RF importnat ASVs? 
 boruta_ASV_list[boruta_ASV_list %in% differentialy_abundant_ASVs]
+
+# which ASVs are RF-important both for treatments and number of flowers, making it a "bi-important" ASV? 
+bi_important_ASVs<-important_flower_ASVs[important_flower_ASVs %in% boruta_ASV_list]
+
+#what are the taxonomies of these ASVs? detected as "bi-importat"
+tax_table(prune_taxa(bi_important_ASVs, physeq_goodSamples_rarefied))
+
+#what is the RF mdoel importance for these "bi-important" ASVs?
+filter(rf_importance_flower_byOTU, otu_id %in% bi_important_ASVs)
+filter(rf_importance_byOTU, otu_id %in% bi_important_ASVs)
 
 
 ```
