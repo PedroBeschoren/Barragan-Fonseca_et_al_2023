@@ -119,6 +119,17 @@ unlist(use.names=FALSE)%>% # flatten the rowname (OTU ID) list, ignoring the nam
 
 
 
+
+# extract Orders from teh sigtabs, showing how often an order is represented
+Order_representation<-lapply(sigtab_results, function (x) x$Order)%>% # extract the rownames from the list, then....
+unlist(use.names=FALSE)%>% # flatten the rowname (OTU ID) list, ignoring the names of the lists, then...
+  table()%>% # put it on a table, showing ORders that are more often represented
+sort()# sort that table
+
+
+#extarct orders of the 62 uniquely differential ASVs
+table(tax_table(prune_taxa(differentialy_abundant_ASVs, physeq_goodSamples))[,4])%>% 
+  sort()
 ```
 
 # 3 - plot bi-clsuter heatmap
@@ -130,7 +141,7 @@ ntb <- normTransform(deseq_obj) # defaults to log2(x+1)
 log2.norm.countsb <- assay(ntb)[differentialy_abundant_ASVs, ] #these colnames should match rownames(df)
 df <- as.data.frame(colData(deseq_obj)[,c("Treatment")])
 row.names(df)<-row.names(as.data.frame(colData(deseq_obj)))
-df_row <- as.data.frame((tax_table(physeq_goodSamples))[,c("Phylum")]) # here you can change to Class, ORder, etc...S
+df_row <- as.data.frame((tax_table(physeq_goodSamples))[,c("Order")]) # here you can change to Class, ORder, etc...S
 pheatmap::pheatmap(log2.norm.countsb, color=viridis(24), annotation_col=df, annotation_row=df_row, main="log2(counts + 1)", 
                    scale="none", fontsize_row = 3, fontsize_col = 8)
 
