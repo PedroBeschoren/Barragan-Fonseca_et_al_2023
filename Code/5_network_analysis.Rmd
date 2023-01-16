@@ -1,0 +1,684 @@
+---
+title: "5_network_analysis"
+author: "Pedro Beschoren"
+date: "2022-12-22"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+# load data, libraries
+```{r}
+
+
+library("BDgraph") # check overlap of bulk soil core ASVs
+library("ggplot2")
+library("tidyr")
+library("plyr")
+library("dplyr")
+library("parallel")
+library("phyloseq")
+library("tibble")
+library("igraph")
+library("purrr")
+library("ggrepel")
+
+
+#check memory and cores
+memory.size()
+detectCores()
+
+# load custom netowrk functions
+source("./Code/Network_custom_functions.R")
+
+# load data
+load("./Code/phyloseq_objects.RData")
+
+load(file = "./Results/model_borutized.RData")
+
+model_borutized$coefnames
+
+#this is your main ps object
+physeq_goodSamples_rarefied
+
+# these are teh ASVs modeled as important by boruta, and cross-validated in caret
+model_borutized$coefnames
+
+physeq_goodSamples
+
+# make a new ps object, that only has AVSs classified as important by boruta
+network_input_ps<-prune_taxa(model_borutized$coefnames,physeq_goodSamples_rarefied)
+
+```
+
+
+
+
+## prepare and check network input
+matrix_input and metadata_inputwill be used as input to bdgraph.dw. here we check some of their structure
+
+```{r echo=TRUE}
+
+
+
+# transform phyloseq objects otus into matrixes
+matrix_input<-t(as(otu_table(network_input_ps), "matrix"))
+
+# transform phyloseq objects metadata into df
+metadata_input<-as(sample_data(network_input_ps), "data.frame")
+
+# force some metadata into  factor
+metadata_input$Treatment<-as.factor(metadata_input$Treatment)
+
+
+# what is the percentage of zeros in this matrix?
+sum(colSums(matrix_input==0))/length(matrix_input)*100
+
+colSums(matrix_input)%>%sort
+rowSums(matrix_input)%>%sort
+
+
+
+```
+
+
+```{r}
+            
+#calculate network, removing spurious edges caused by treament metadata
+
+# this tep was performed on WUR's HPC annuna, consuming 1.1 core and 730Gb memory for 18h
+# BD_out_1.5M<-bdgraph.dw(data = matrix_input, 
+#                   x = metadata_input,
+#                   algorithm = "bdmcmc",
+#                   formula = y ~  Treatment,
+#                   cores = "all",
+#                   iter_bdw = 1500000,
+#                   iter = 300000,
+#                   save = TRUE)
+
+# save output externallu
+# save(BD_out_1.5M, file = "./Data/BD_out_1.5M.RData")
+
+
+
+
+
+```
+
+
+
+# load graphs calculated on HPC
+```{r}
+# load bd graph object
+load(file = "./Data/BD_out_1.5M.RData")
+
+# CSS data, overwirting eveyrhing in the R session
+load(file = "./Data/BD_CSS_out_1.5M.RData")
+BD_out_1.5M<-BD_CSS_out_1.5M
+  
+  BD_out_1.5M$K_hat
+  
+#plot edge stability
+jpeg(file="./Results/coda1.5M.jpeg")
+plotcoda(BD_out_1.5M)
+dev.off()
+
+#plot graph summary
+jpeg(file="./Results/summary1.5M.jpeg")
+summary.bdgraph(BD_out_1.5M)
+dev.off()
+
+#create a random network
+data.sim <- bdgraph.sim( p = 94, 
+                         graph = "random",
+                         n = 40,
+                         size = 177, 
+                         vis = FALSE )
+
+#compare this entwork with a random network
+BDgraph::compare(BD_out_1.5M, data.sim)
+
+plot(BD_out_1.5M)
+
+dim(BD_out_1.5M$last_graph)
+```
+
+# check bdgrph plink distribuion
+```{r}
+
+
+
+plink_vector<- plinks(BD_out_1.5M)[upper.tri(plinks(BD_out_1.5M))]
+hist(plink_vector)
+summary(plink_vector)
+
+# network with plinks on teh 3rd quartile
+summary(plink_vector)[[5]]
+```
+# create list of different plink cutoffs
+```{r}
+# check different cutoffs
+
+bd_cutoff_07<-BDgraph::select(BD_out_1.5M,  cut = 0.7, vis = TRUE)  #same  as random
+bd_cutoff_06<-BDgraph::select(BD_out_1.5M,  cut = 0.6, vis = TRUE)  #same  as random
+bd_cutoff_md2sd<-BDgraph::select(BD_out_1.5M,  cut = median(plink_vector)+2*sd(plink_vector), vis = TRUE)  #same  as random
+bd_cutoff_md1sd<-BDgraph::select(BD_out_1.5M,  cut = median(plink_vector)+1*sd(plink_vector), vis = TRUE)  #differs from ramdom
+bd_cutoff_md<-BDgraph::select(BD_out_1.5M,  cut = median(plink_vector), vis = TRUE) # differs from ramdom
+bd_cutoff_3qrtl<-BDgraph::select(BD_out_1.5M,  cut = summary(plink_vector)[[5]], vis = TRUE) # 3rd quartile, differs from random
+
+#save as list
+bd_list<-list("bd_cutoff_07" = bd_cutoff_07,
+              "bd_cutoff_06"= bd_cutoff_06,
+              "bd_cutoff_05" = summary.bdgraph(BD_out_1.5M)$selected_g,
+              "bd_cutoff_md2sd" = bd_cutoff_md2sd,
+              "bd_cutoff_md1sd" = bd_cutoff_md1sd,
+              "bd_cutoff_md" = bd_cutoff_md,
+              "bd_cutoff_3qrtl" = bd_cutoff_3qrtl)
+
+
+
+```
+
+
+
+# import to igraph, 
+```{r}
+
+library(igraph)
+
+# this is my bdgraph object
+bd_list
+
+#define selected graph 
+selected_graph<-summary.bdgraph(BD_out_1.5M)$selected_g
+
+selected_graph_l<-lapply(bd_list, function(x) summary.bdgraph(x)$selected_g)
+
+#makes igraph from dbpackage
+igraph_raref_obj_l<-lapply(bd_list, function (x)
+  graph_from_adjacency_matrix(adjmatrix = x, mode = "undirected"))
+
+
+
+
+```
+
+# add edge weight to igraph
+```{r}
+# Function to calculate partial correlations (from Paryia;  theta = k_hat from bd_object)
+calculate.strength.theta <- function(theta){
+  p <- ncol(theta)
+  cond.cor <- matrix(NA, ncol=p, nrow=p)
+  for(i in 1:nrow(theta))
+  {
+    for(j in 1:ncol(theta))
+    {
+      cond.cor[i,j] <- - theta[i,j]/ (sqrt(theta[i,i])* sqrt(theta[j,j]))
+    }
+  }
+  rownames(cond.cor) <- colnames(theta)
+  colnames(cond.cor) <- colnames(theta)
+  return(cond.cor)
+}
+
+
+
+# define a funciton to add bd_graph weights to igraph objects
+add_edge_weight_to_igraph<-function(original_bd_obj, bd_obj_l, igraph_obj_l){
+  # this function will add edged weights to the igraph objects
+    # original_bd_obj = a bdgraph object, it MUST contain a $K_hat data layer
+    # bd_obj_l = a list of bd_graph objects, such as those with different plink cutoffs,
+    # igraph_obj_l= a list of igraph objects, geerated with the graph_from_adjacency_matrix)() function
+      # we define the eddge weights with paryia's function, targeting the K_hat, then...
+      # we extract the weights of the edges that are valid at the specific bdgraph cutoof, then...
+      # weights are unlisted, following a row-by-row format that fits igraph, then..
+      # check if the number of igraph and bdgraph objects edges match, then...
+      # save the calculated edge weights in the igraph object
+  # it returns an igraph object with the weights calculated with paryia's function on bdgraph objects
+  
+  
+
+#edge's weight ; NOTE: only the original bdgraph obeject has theta (K_hat)
+edge_weight<-calculate.strength.theta (original_bd_obj$K_hat)
+
+
+# define weight edges of the edges selected in each plink filtering. we msut define it row by row, then unlist, to fit igraph edge listing order
+edge_weight_by_row_l<-lapply(bd_obj_l, function(x){
+    edge_weight_by_row<-list()
+    for (i in 1:nrow(edge_weight)){
+    value <-  edge_weight[i,][x[i,]>0]
+    edge_weight_by_row[i]<-list(value)
+    }
+  return(edge_weight_by_row)
+})
+
+#unlist it
+edge_weight_by_row_l<-lapply(edge_weight_by_row_l, unlist)
+
+
+# check if the number of edges retained in the weight list of vectors is the same as the number of the edges in the igraph object (all sould eb TRUE)
+print(" CHECK: is the number of edges retained in the weight list of vectors is the same as the number of the edges in the igraph object? all should be = TRUE!")
+print(lapply(edge_weight_by_row_l, length) %in% lapply(igraph_obj_l, function (x) length(E(x))))
+
+# save as edges in igraph
+igraph_obj_l<-mapply(function(x,y){
+  E(x)$weights<-y
+  return(x)
+},
+x = igraph_obj_l,
+y = edge_weight_by_row_l)
+
+# define output to export
+return(igraph_obj_l)
+  
+}
+
+
+# run custm function, addinf weight to teh igraph objcts
+igraph_raref_obj_l<-add_edge_weight_to_igraph(original_bd_obj = BD_out_1.5M, 
+                                              bd_obj_l = bd_list, 
+                                              igraph_obj_l = igraph_raref_obj_l)
+
+
+```
+
+
+
+# check if the iraph objects differ from a random network with the same number of nodes and edges
+media+1sd and 3rd quartile are returning non-random netowrks
+```{r}
+# run this custom function over a list of graph objects ; it will compare teh real netowkr to 1000 random netowrks... can take a minute
+diff_to_rand_net<-lapply(igraph_raref_obj_l, Real_VS_random_networks)
+map(diff_to_rand_net,2)
+
+# count number of metrics that differ between network and radom
+lapply(diff_to_rand_net, function(x)
+  table(x[[2]]))
+
+
+# define node degree and check degree distribution
+node_prop_l<-lapply(igraph_raref_obj_l, function(x)
+  Generate_node_metrics2(igraph_obj = x, physeq_obj= network_input_ps))
+
+hist_list<-lapply(node_prop_l, function(x) hist(x$Degree))
+names(node_prop_l)
+
+
+```
+
+# filter igraph objects according to weight
+```{r}
+
+
+
+# remove edges within 1 sd of zero
+igraph_raref_obj_strongEdge_l<-lapply(igraph_raref_obj_l, function(x){
+
+igraph_weak_edges<-E(x)[E(x)$weights< (0+sd(E(x)$weights)) & 
+                   E(x)$weights> (0-sd(E(x)$weights)) ]
+
+
+igraph_strong_E<-delete_edges(x, edges = igraph_weak_edges)
+
+return(igraph_strong_E)
+
+})
+
+# run this custom function over a list of graph objects ; it will compare teh real netowkr to 1000 random netowrks... can take a minute
+diff_to_rand_net_filt<-lapply(igraph_raref_obj_strongEdge_l, Real_VS_random_networks)
+map(diff_to_rand_net_filt,2)
+
+# count number of metrics that differ between network and radom... filtering edges by weight is not helping; it actually amkes it more similar to random
+lapply(diff_to_rand_net_filt, function(x)
+  table(x[[2]]))
+
+# define node degree and check degree distribution.... edge degree dsitribution is still mostly normal
+node_prop_filt_l<-lapply(igraph_raref_obj_strongEdge_l, function(x)
+  Generate_node_metrics2(igraph_obj = x, physeq_obj= network_input_ps))
+
+hist_list_filt<-lapply(node_prop_filt_l, function(x) hist(x$Degree))
+
+
+
+
+```
+
+#positive and negative weights have different distributions..... remove the lowest quartile of each distribution
+```{r}
+
+
+# remove edges within 1 sd of zero
+igraph_raref_obj_strongEdge_l<-lapply(igraph_raref_obj_l, function(x){
+
+#save weights internally..  
+weight_vector<-E(x)$weights
+
+# define lowers quartiles...
+weight_vector
+pos_limit<-summary(weight_vector[weight_vector>0])[[2]] # lowest quartile of positive weights
+neg_limit<-summary(weight_vector[weight_vector<0])[[5]] # lowest quartile of negative weights
+
+
+
+
+igraph_weak_edges<-E(x)[E(x)$weights< pos_limit & 
+                        E(x)$weights> neg_limit ]
+
+
+
+igraph_strong_E<-delete_edges(x, edges = igraph_weak_edges)
+
+return(igraph_strong_E)
+
+})
+
+
+# check output
+hist(E(igraph_raref_obj_strongEdge_l$bd_cutoff_3qrtl)$weights, breaks = 60)
+
+
+
+
+
+
+# run this custom function over a list of graph objects ; it will compare teh real netowkr to 1000 random netowrks... can take a minute
+diff_to_rand_net_filt<-lapply(igraph_raref_obj_strongEdge_l, Real_VS_random_networks)
+map(diff_to_rand_net_filt,2)
+
+# count number of metrics that differ between network and radom... no changes
+lapply(diff_to_rand_net_filt, function(x)
+  table(x[[2]]))
+
+# define node degree and check degree distribution.... edge degree dsitribution is still mostly normal
+node_prop_filt_l<-lapply(igraph_raref_obj_strongEdge_l, function(x)
+  Generate_node_metrics2(igraph_obj = x, physeq_obj= network_input_ps))
+
+hist_list_filt<-lapply(node_prop_filt_l, function(x) hist(x$Degree))
+names(node_prop_filt_l)
+
+
+
+
+```
+
+
+
+#positive and negative weights have different distributions..... remove those below the median of each distrubition
+```{r}
+
+
+# remove edges within 1 sd of zero
+igraph_raref_obj_strongEdge_l<-lapply(igraph_raref_obj_l, function(x){
+
+#save weights internally..  
+weight_vector<-E(x)$weights
+
+# define lowers quartiles...
+weight_vector
+pos_limit<-summary(weight_vector[weight_vector>0])[[3]] # lowest quartile of positive weights
+neg_limit<-summary(weight_vector[weight_vector<0])[[3]] # lowest quartile of negative weights
+
+
+
+
+igraph_weak_edges<-E(x)[E(x)$weights< pos_limit & 
+                        E(x)$weights> neg_limit ]
+
+
+
+igraph_strong_E<-delete_edges(x, edges = igraph_weak_edges)
+
+return(igraph_strong_E)
+
+})
+
+
+# check output
+hist(E(igraph_raref_obj_strongEdge_l$bd_cutoff_3qrtl)$weights, breaks = 60)
+
+
+
+
+
+
+# run this custom function over a list of graph objects ; it will compare teh real netowkr to 1000 random netowrks...not any better
+diff_to_rand_net_filt<-lapply(igraph_raref_obj_strongEdge_l, Real_VS_random_networks)
+map(diff_to_rand_net_filt,2)
+
+# count number of metrics that differ between network and radom... no changes
+lapply(diff_to_rand_net_filt, function(x)
+  table(x[[2]]))
+
+# define node degree and check degree distribution.... edge degree dsitribution is still mostly normal
+node_prop_filt_l<-lapply(igraph_raref_obj_strongEdge_l, function(x)
+  Generate_node_metrics2(igraph_obj = x, physeq_obj= network_input_ps))
+
+lapply(node_prop_filt_l, function(x) hist(x$Degree))
+names(node_prop_filt_l)
+
+igraph_raref_obj_strongEdge_l$bd_cutoff_md2sd
+
+
+```
+
+filtering by edge weight is not improving the amount of metrics different from 1000 random netowrks. sometimes it gets more similar to random!
+
+with CSS normalization...
+bd_cutoff_05 had 3/8 TRUE differences to random networks, and good degree dsitribution, when we remove the lower wegiht quartile
+bd_cutoff_md2sd had 5/8 TRUE differences to random networks, and good degree dsitribution, when we remove weights lower than median... with 127 edges, this is my network of choice for now
+
+
+
+# check slelected graph keystones
+```{r}
+# plink cutoff at media + 2sd, edge weight cutoff above media... provides 5/8 difference s to random and good degree distirbution
+plot(igraph_raref_obj_strongEdge_l$bd_cutoff_md2sd)
+
+# remove 5 ASVs with zero edges
+isolated <- which(degree(igraph_raref_obj_strongEdge_l$bd_cutoff_md2sd)==0)
+select_igraph<- delete.vertices(igraph_raref_obj_strongEdge_l$bd_cutoff_md2sd, isolated)
+
+# tehse are the ASVs within our graph
+V(select_igraph)
+
+#these are their node proprieties
+selected_nodes<-Generate_node_metrics2(igraph_obj = select_igraph, physeq_obj= network_input_ps)
+
+# define keystones and hubs
+keystone_taxa<-KeystoneDetector3(selected_nodes) # 1 kesytone taxa
+zi_pi_output<-Zi_Pi_list(select_igraph) # 9 module connectors
+
+# add Zi/Pi to node table
+selected_nodes<-left_join(selected_nodes,zi_pi_output[[1]],  by =c("OTU" ="names" ))
+
+
+
+```
+
+#make heat tree showing node degree!
+```{r}
+
+library("metacoder")
+
+```
+
+
+
+
+# OH NO!
+# run spiec.easi on te same input data
+
+```{r}
+
+library(devtools)
+install_github("zdk123/SpiecEasi")
+
+if (!require(SpiecEasi)) install_github("zdk123/SpiecEasi")
+library("SpiecEasi") # builds the sparse networks
+
+
+
+pargs <- list(rep.num=100, seed=10010, ncores=1, thresh=0.05) 
+
+# run the main function to calculate the network. it can take several minutes to a couple hours
+list_spiec_objct<-                               SpiecEasi::spiec.easi (network_input_ps, 
+                                                                        method="glasso", # if you change methods to "mb" you will have to change detials in make_igrap() as commented in that function
+                                                                        lambda.min.ratio=1e-2, # the higher the more edges, leading to higher density network. as it goes lower, computational times increases SUBSTANTIALLY. standard is 1e-3 but 1e-2 works well ; pedro's PC crahs when 1e-7
+                                                                        nlambda=30, # number of slices between minimum amount of edges to maximum. low lavues dive more sparse networks, high values give denser networks. keep it between 10 and 100
+                                                                        sel.criterion ="bstars", # selects the lambda and modules the most stable connections
+                                                                        pulsar.select = TRUE,
+                                                                        pulsar.params=pargs) #iteration of starts, n)
+
+
+
+###ake igraph..
+spiec_igraph<-make_igraph(spiec_obj = list_spiec_objct,
+                          physeq_obj = network_input_ps)
+
+
+
+
+  # creating OTU names list
+  names_spiec_obj <- taxa_names(network_input_ps) 
+  # adding weights to the graph
+  # sebeta <- symBeta(getOptBeta(spiec_obj), mode='maxabs') # unsilence this to use mb instead of glasso
+  secor  <- stats::cov2cor(as.matrix(getOptCov(list_spiec_objct))) # silence this if using mb instead of glasso
+  elist.gl <- summary(Matrix::triu(secor*getRefit(list_spiec_objct), k=1)) # for glasso
+  network <- adj2igraph(SpiecEasi::symBeta(Matrix::drop0(getRefit(list_spiec_objct))), # force it into a symmetric matrix with symbeta
+                        vertex.attr = list(name=names_spiec_obj),
+                       # edge.attr=list(weight=summary(Matrix::triu(t(secor)*getRefit(list_spiec_objct), k=1))[,3] ), # use this for glasso
+                        # edge.attr=list(weight=Matrix::summary(t(sebeta))[,3] ), # use this for mb
+                        rmEmptyNodes = FALSE) # now we can add weights to the expoted write.graph()
+  
+  # adds positive/negative as an edge attribute
+  edge_attr(network,"positive_negative")<-ifelse(E(network)$weight>0,"positive", "negative")
+  
+  # adds edge betweenness
+  edge_attr(network,"weighted_edge_betweenness")<- edge_betweenness(network,  
+                                                                    weights=sqrt(E(network)$weight*E(network)$weight), # weighted edge betweenness requires positive weights 
+                                                                    directed = FALSE)# needs positive weights
+
+  
+  
+  
+  Real_VS_random_networks(network)
+  spiec_nod<-Generate_node_metrics2(network, physeq_obj = network_input_ps)
+  hist(spiec_nod$Degree)
+  
+```
+
+
+#use the old filtering
+```{r}
+# hit a filtering that returns ~ 94 ASVs
+network_input_ps<-filterPhyseq(physeq_goodSamples_rarefied, 0.0425, 40)
+
+
+# transform phyloseq objects otus into matrixes
+matrix_input<-t(as(otu_table(network_input_ps), "matrix"))
+
+# transform phyloseq objects metadata into df
+metadata_input<-as(sample_data(network_input_ps), "data.frame")
+
+# force some metadata into  factor
+metadata_input$Treatment<-as.factor(metadata_input$Treatment)
+
+
+# what is the percentage of zeros in this matrix?
+sum(colSums(matrix_input==0))/length(matrix_input)*100
+
+colSums(matrix_input)%>%sort
+rowSums(matrix_input)%>%sort
+
+
+
+## export the old filtering to the hpc
+save(matrix_input, file = "./Data/matrix_input_oldfilt.RData")
+save(metadata_input, file = "./Data/metadata_input_oldfilt.RData")
+
+#load HPC calculated file
+load(metadata_input, file = "./Data/BD_out_1.5M_oldfilt.RData")
+
+
+#plot edge stability
+jpeg(file="./Results/coda1.5M_oldfilt.jpeg")
+plotcoda(BD_out_1.5M)
+dev.off()
+
+#plot graph summary
+jpeg(file="./Results/summary1.5M_oldfilt.jpeg")
+summary.bdgraph(BD_out_1.5M)
+dev.off()
+
+#define selected graph 
+selected_graph<-summary.bdgraph(BD_out_1.5M)$selected_g
+
+#makes igraph from dbpackage
+igraph_obj<-graph_from_adjacency_matrix(adjmatrix = selected_graph,
+                                        mode = "undirected")
+
+
+# Function to calculate partial correlations (from Paryia;  theta = k_hat from bd_object)
+calculate.strength.theta <- function(theta){
+  p <- ncol(theta)
+  cond.cor <- matrix(NA, ncol=p, nrow=p)
+  for(i in 1:nrow(theta))
+  {
+    for(j in 1:ncol(theta))
+    {
+      cond.cor[i,j] <- - theta[i,j]/ (sqrt(theta[i,i])* sqrt(theta[j,j]))
+    }
+  }
+  rownames(cond.cor) <- colnames(theta)
+  colnames(cond.cor) <- colnames(theta)
+  return(cond.cor)
+}
+
+
+
+#edge's weight
+edge_weight<-calculate.strength.theta (BD_out_1.5M$K_hat)
+
+# tis is the selected graph
+selected_graph
+
+#*NOTE*: IGRAPH RECORDS THE EDGE WEIGHT ROW BY ROW, NOT COLUMN BY COLUMN. THE FOLLOWING CHUNK WILL TURN THE VALID EDGES INTOA VECTOR, ROW BY ROW 
+
+# select the edge weight, row by row
+edge_weight_by_row<-list()
+for (i in 1:nrow(edge_weight)){
+value <-  edge_weight[i,][selected_graph[i,]>0]
+edge_weight_by_row[i]<-list(value)
+}
+
+# this is the ourput. rows with no edges show as "named numeric(0)" 
+edge_weight_by_row
+
+
+#unlist it
+edge_weight_by_row<-unlist(edge_weight_by_row)
+
+
+# save as edges in igraph
+E(igraph_obj)$weights<-edge_weight_by_row
+
+
+
+#compare metrics of the real network with metrics of random networks
+real_VS_random_net_output<-Real_VS_random_networks(igraph_obj)
+
+# generate a bunch of real network metrics
+Generate_RealNetworks_metrics(igraph_obj)
+
+
+nodes<-Generate_node_metrics2(igraph_obj = igraph_obj ,
+                       physeq_obj = network_input_ps)
+hist(nodes$Degree, breaks = 8)
+
+
+
+
+
+```
