@@ -45,6 +45,9 @@ plot_ordination(physeq = physeq_goodSamples_CSS,
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5)) +
   theme(legend.position="right")
 
+
+
+
 ```
 
 # 2 - check beta dispersion
@@ -64,10 +67,18 @@ beta_disper_calc<-anova(beta_disper, permutations = 999)
 p_dispersion<-beta_disper_calc[[5]][1] 
 
 #plots a spdier plot (PCoA) with centroids
-plot(beta_disper,
+beta_diversity<-plot(beta_disper,
      main = "Beta Dispersion",
      sub = p_dispersion,
      xlab="p value for homogeniety of multivariate variances:")
+
+
+#export as pdf
+ggsave(beta_diversity, file = "./Results/1_Beta_Dipersion_PCoA.pdf", 
+       width = 15, 
+       height = 15, 
+       units = "cm"  )
+
 
 
 
@@ -114,11 +125,17 @@ merg_to_ps<-sample_data(calculated_diversity) # makes the diversity calculations
 calculated_diversity_df<-as(sample_data(merge_phyloseq(physeq_goodSamples_rarefied,merg_to_ps)),"data.frame") # forces sample data of updated phyloseq object into a dataframe
 
 #Lets see this on a simple boxplot for Shannon diversity index
-ggplot(calculated_diversity_df, aes(x =Treatment, y = fisher, fill =Treatment ))+
+fisher_div<-ggplot(calculated_diversity_df, aes(x =Treatment, y = fisher, fill =Treatment ))+
   geom_boxplot()+
   theme_bw()+
   labs(title = "Fisher diversity indexes")
 
+
+#export as pdf
+ggsave(fisher_div, file = "./Results/3_fisher_diversity.pdf", 
+       width = 15, 
+       height = 15, 
+       units = "cm"  )
 
 
 

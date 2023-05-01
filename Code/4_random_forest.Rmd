@@ -598,11 +598,8 @@ bi_important_ASVs<-important_flower_ASVs[important_flower_ASVs %in% boruta_ASV_l
 tax_table(prune_taxa(bi_important_ASVs, physeq_goodSamples_rarefied))
 
 #what is the RF mdoel importance for these "bi-important" ASVs?
-<<<<<<< HEAD
 filter(rf_importance_flower_byOTU, otu_id %in% bi_important_ASVs)
 filter(rf_importance_byOTU, otu_id %in% bi_important_ASVs)
-=======
->>>>>>> 3f2bae0dc68f9b55461b0660de37c73af8d2df75
 
 
 ```
