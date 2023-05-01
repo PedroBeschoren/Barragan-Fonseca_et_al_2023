@@ -8,9 +8,6 @@
       }
     ]
   },
-  "Bioconductor": {
-    "Version": "3.14"
-  },
   "Packages": {
     "AlgDesign": {
       "Package": "AlgDesign",
@@ -2458,10 +2455,8 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.15.2",
+      "Version": "0.16.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "206c4ef8b7ad6fb1060d69aa7b9dfe69",
       "Requirements": []
     },
     "reshape": {
@@ -2539,10 +2534,8 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.0.4",
+      "Version": "1.0.6",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "6539dd8c651e67e3b55b5ffea106362b",
       "Requirements": []
     },
     "rmarkdown": {
