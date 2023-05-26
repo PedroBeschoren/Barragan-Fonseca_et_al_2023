@@ -72,6 +72,7 @@ Boruta_output<- Boruta(Treatment~.,
 
 #save the otuput, as it takes some 15 minutes to calculate
 save(Boruta_output, file = "./Results/Boruta_output.RData")
+load(file = "./Results/Boruta_output.RData")
 
 ```
 
@@ -172,6 +173,18 @@ tax_table(rf_important_heatTrees )<-tax_table(rf_important_heatTrees)[,1:7]
 # let's remove the "r__"ranks from the taxonomy, they can be useful but will polute our plot
 tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))] <- gsub(tax_table(rf_important_heatTrees )[, colnames(tax_table(rf_important_heatTrees ))],     pattern = "[a-z]__", replacement = "")
 
+#reorder samples for better plotting
+Order<- c("HC_2",  "HC_3" , "HC_4" , "HC_5",  "HC_6" , "HC_7",  "HC_8",
+       "BSF_1", "BSF_2", "BSF_3" ,"BSF_4" ,"BSF_5" ,"BSF_6", "BSF_7",
+       "MW_1" , "MW_4" , "MW_5" , "MW_6" , "MW_7" , "MW_8",
+       "CHT_2", "CHT_3", "CHT_4" ,"CHT_5", "CHT_6" ,"CHT_7",
+       "OF_2" , "OF_3"  ,"OF_4" , "OF_5" , "OF_7",
+       "C_1" ,  "C_2" ,  "C_3"  , "C_4" ,  "C_5"  , "C_6" ,  "C_7" ,  "C_8")
+
+
+otu_table(rf_important_heatTrees) <- otu_table(rf_important_heatTrees)[, Order]
+
+
 # transform from phyloseq to  taxmap object
 rf_important_metacoder<-parse_phyloseq(rf_important_heatTrees )
 
@@ -243,14 +256,6 @@ max_RF_importance<-max(rf_importance_byOTU$meanImp)
 
 
 ########### done! ######
-
-
-
-
-
-
-
-
 
 
 
