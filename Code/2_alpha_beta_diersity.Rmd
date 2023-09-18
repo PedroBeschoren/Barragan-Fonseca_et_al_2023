@@ -84,6 +84,39 @@ ggsave(beta_diversity, file = "./Results/1_Beta_Dipersion_PCoA.pdf",
 
 ```
 
+## 2.1 -  plot beta dispersion boxplot
+```{r}
+boxplot(beta_disper)
+
+```
+
+## 2.2 - compare beta dispersion of exuviae treatments VS other treatments
+
+
+```{r}
+# add new metadata column, separating excuviae treatments from non-excuvie treatments
+
+physeq_goodSamples_CSS@sam_data$Exuviae_yes_no<-
+ifelse(test = physeq_goodSamples_CSS@sam_data$Treatment %in% c("BSF", "MW", "HC"),
+       yes = "Exuviae treatments",
+       no = "Control treatments")
+
+
+
+#calculates beta dispersions of the treatment effects
+beta_disper<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray"),
+                         group = sample_data(physeq_goodSamples_CSS)[["Exuviae_yes_no"]]) 
+
+
+# check if ebta dispersions are significantly differente
+beta_disper_calc<-anova(beta_disper, permutations = 999)
+
+#visualize plot
+boxplot(beta_disper)
+
+```
+
+
 # 3 - run PERMANOVA and post-hoc test
 We see significat treatment effects, with clear paiwise distinctions
 
