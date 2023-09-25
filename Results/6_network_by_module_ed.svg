@@ -1,0 +1,3500 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="1172.7701"
+   height="1047.6185"
+   viewBox="0 0 1172.7701 1047.6185"
+   id="svg3177"
+   sodipodi:docname="6_network_by_module_ed.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3181">
+    <clipPath
+       id="clip18-4">
+      <path
+         d="m 2181,-1627.5 v 26.1563 h 85.4824 V -1627.5 Z"
+         id="path353-9" />
+    </clipPath>
+    <clipPath
+       id="clip29">
+      <path
+         d="m 2181,-1357.5 v 26.1563 h 212.2598 V -1357.5 Z"
+         id="path654" />
+    </clipPath>
+    <clipPath
+       id="clip30">
+      <path
+         d="m 2181,-817.5 v 26.15625 h 173.3145 V -817.5 Z"
+         id="path665" />
+    </clipPath>
+    <clipPath
+       id="clip25">
+      <path
+         d="m 2181,-1582.5 v 26.1562 h 159.9844 V -1582.5 Z"
+         id="path562" />
+    </clipPath>
+    <clipPath
+       id="clip31">
+      <path
+         d="m 2181,-997.5 v 26.15625 h 151.0879 V -997.5 Z"
+         id="path676" />
+    </clipPath>
+    <clipPath
+       id="clip19">
+      <path
+         d="m 2181,-1402.5 v 26.1563 h 232.2305 V -1402.5 Z"
+         id="path376" />
+    </clipPath>
+    <clipPath
+       id="clip18-4-7">
+      <path
+         d="m 2181,-1627.5 v 26.1563 h 85.4824 V -1627.5 Z"
+         id="path353-9-2" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview3179"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.45814732"
+     inkscape:cx="-336.13642"
+     inkscape:cy="504.20463"
+     inkscape:window-width="2880"
+     inkscape:window-height="1586"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3175" />
+  <title
+     id="title2" />
+  <desc
+     id="desc4">Creator: FreeHEP Graphics2D Driver Producer: org.freehep.graphicsio.svg.SVGGraphics2D Revision Source:  Date: Monday, 24 April 2023 at 16:34:57 Central European Summer Time</desc>
+  <g
+     stroke-dashoffset="0"
+     stroke-linejoin="miter"
+     stroke-dasharray="none"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     id="g3175"
+     transform="translate(4.2140041,-0.65502331)">
+    <!-- drawing style -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <g
+       transform="matrix(0.27900882,0,0,0.27900882,653.1132,497.26855)"
+       id="g232">
+      <!-- drawing style -->
+    </g>
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <g
+       transform="matrix(0.37212767,0,0,0.37212767,451.92615,588.39057)"
+       id="g606">
+      <clipPath
+         id="clip26">
+        <path
+           d="m 2181,-1042.5 v 26.1563 h 153.3145 V -1042.5 Z"
+           id="path597" />
+      </clipPath>
+      <g
+         clip-path="url(#clip26)"
+         id="g604">
+        <!-- transform -->
+      </g>
+      <!-- clip26 -->
+    </g>
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <path
+       d="M 47.575381,406.72579 75.19533,383.28515"
+       id="path699"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 106.22622,201.01149 75.01395,236.19696"
+       id="path705"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 71.38784,234.02455 117.29916,109.75273"
+       id="path711"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 101.83735,280.32341 310.72576,744.99724"
+       id="path717"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 106.30844,265.08592 6.85832,1.73679"
+       id="path723"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 78.08709,248.75074 58.87686,232.45832"
+       id="path729"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 114.42151,205.94171 -13.8,36.93673"
+       id="path735"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 110.7302,272.54934 792.83637,696.89883"
+       id="path741"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 52.58507,185.68604 107.9508,-63.29017"
+       id="path747"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 183.51367,124.86142 3.44361,3.17007"
+       id="path753"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 158.61074,113.938 -50.75107,-4.20534"
+       id="path759"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 134.16446,272.20378 73.89601,19.05143"
+       id="path765"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 122.57131,207.57539 -1.77952,46.6744"
+       id="path771"
+       style="fill:none;stroke:#b2182b;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 108.48747,494.30719 53.94195,48.56956"
+       id="path777"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 182.24965,548.90715 979.3011,434.69294"
+       id="path783"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 133.19409,205.75628 16.88648,42.61057"
+       id="path789"
+       style="fill:none;stroke:#b2182b;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 140.27707,258.30569 -78.928,-30.03316"
+       id="path795"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 173.63012,262.23591 723.12163,190.95342"
+       id="path801"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 141.8877,255.11187 52.34412,197.64734"
+       id="path807"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 175.6923,716.89662 124.07558,40.31459"
+       id="path813"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 148.04579,190.60725 47.56417,17.76714"
+       id="path819"
+       style="fill:none;stroke:#b2182b;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 149.10638,186.9916 955.4626,361.53349"
+       id="path825"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 143.21065,198.6956 34.48108,30.24809"
+       id="path831"
+       style="fill:none;stroke:#b2182b;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 57.14569,212.14093 83.21332,-99.31771"
+       id="path837"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 197.90935,150.27407 156.11824,111.80269"
+       id="path843"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 807.8946,199.58252 857.20338,80.540614"
+       id="path849"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 815.59139,218.56187 995.0218,296.02799"
+       id="path855"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 878.00897,137.24815 -65.45059,65.45062"
+       id="path861"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 857.20338,177.78172 806.76995,56.024695"
+       id="path867"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 881.71932,139.72734 -15.76265,38.05438"
+       id="path873"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 178.48732,809.13484 299.76788,769.72843"
+       id="path879"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <g
+       id="g3694">
+      <g
+         transform="matrix(1.0972197,0,0,1.0972197,-2309.0835,2725.0611)"
+         id="g362"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-1607.3926)"
+           id="g358"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text356"
+             style="fill:#333333">c__Bacilli</text>
+        </g>
+        <g
+           clip-path="url(#clip18-4)"
+           id="g360-9"
+           transform="translate(-132.68115,-42.154461)"
+           style="fill:#333333">
+          <g
+             transform="translate(2181,-1607.3926)"
+             id="g358-4"
+             style="fill:#333333">
+            <text
+               xml:space="preserve"
+               style="font-size:55.1319px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:3.86607"
+               x="98.355606"
+               y="-40.139847"
+               id="text4706"><tspan
+                 sodipodi:role="line"
+                 id="tspan4704"
+                 style="fill:#333333;stroke-width:3.86606"
+                 x="98.355606"
+                 y="-40.139847"></tspan></text>
+          </g>
+          <!-- transform -->
+          <text
+             xml:space="preserve"
+             style="font-size:55.1319px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:3.86607"
+             x="2867.7842"
+             y="-1308.9916"
+             id="text4710"><tspan
+               sodipodi:role="line"
+               id="tspan4708"
+               style="fill:#333333;stroke-width:3.86606"
+               x="2867.7842"
+               y="-1308.9916"></tspan></text>
+        </g>
+        <!-- clip18 -->
+      </g>
+      <g
+         transform="matrix(1.0972197,0,0,1.0972197,-1451.193,2761.8687)"
+         id="g362-0"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-1607.3926)"
+           id="g358-1"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="-17.395187"
+             y="-27.923853"
+             id="text356-7"
+             style="fill:#333333">Positive co-variance</text>
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="-17.386179"
+             y="12.902135"
+             id="text356-7-4"
+             style="fill:#333333">Negative co-variance</text>
+        </g>
+        <g
+           clip-path="url(#clip18-4-7)"
+           id="g360-9-7"
+           transform="translate(-132.68115,-42.154461)"
+           style="fill:#333333">
+          <g
+             transform="translate(2181,-1607.3926)"
+             id="g358-4-7"
+             style="fill:#333333">
+            <text
+               xml:space="preserve"
+               style="font-size:55.1319px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:3.86607"
+               x="98.355606"
+               y="-40.139847"
+               id="text4706-1"><tspan
+                 sodipodi:role="line"
+                 id="tspan4704-9"
+                 style="fill:#333333;stroke-width:3.86606"
+                 x="98.355606"
+                 y="-40.139847" /></text>
+          </g>
+          <!-- transform -->
+          <text
+             xml:space="preserve"
+             style="font-size:55.1319px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:3.86607"
+             x="2867.7842"
+             y="-1308.9916"
+             id="text4710-3"><tspan
+               sodipodi:role="line"
+               id="tspan4708-7"
+               style="fill:#333333;stroke-width:3.86606"
+               x="2867.7842"
+               y="-1308.9916" /></text>
+        </g>
+        <!-- clip18 -->
+      </g>
+      <g
+         clip-path="url(#clip19)"
+         id="g383"
+         transform="matrix(1.0972197,0,0,1.0972197,-2308.0467,2556.9604)"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-1382.3926)"
+           id="g381"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text379"
+             style="fill:#333333">c__Gammaproteobacteria</text>
+        </g>
+        <!-- transform -->
+      </g>
+      <g
+         fill="#3333ff"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g400"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2295.7759)">
+        <path
+           d="m 2081,-1605 h 80 v 35 h -80 z"
+           id="path398" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g406"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2295.7759)">
+        <path
+           d="m 2081,-1605 h 80 v 35 h -80 z"
+           id="path404" />
+      </g>
+      <g
+         fill="#ef3b2c"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g424"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2295.7759)">
+        <path
+           d="m 2081,-1650 h 80 v 35 h -80 z"
+           id="path422" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g430"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2295.7759)">
+        <path
+           d="m 2081,-1650 h 80 v 35 h -80 z"
+           id="path428" />
+      </g>
+      <g
+         fill="#ffff00"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g448"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,1818.1455)">
+        <path
+           d="m 2081,-1020 h 80 v 35 h -80 z"
+           id="path446" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g454"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,1818.1455)">
+        <path
+           d="m 2081,-1020 h 80 v 35 h -80 z"
+           id="path452" />
+      </g>
+      <g
+         fill="#00ff00"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g471"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,2071.7167)">
+        <path
+           d="m 2081,-1380 h 80 v 35 h -80 z"
+           id="path469" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g477"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,2071.7167)">
+        <path
+           d="m 2081,-1380 h 80 v 35 h -80 z"
+           id="path475" />
+      </g>
+      <g
+         fill="#999999"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g494"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,1710.1023)">
+        <path
+           d="m 2081,-840 h 80 v 35 h -80 z"
+           id="path492" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g500"
+         transform="matrix(0.82265841,0,0,0.82265841,-1341.3218,1710.1023)">
+        <path
+           d="m 2081,-840 h 80 v 35 h -80 z"
+           id="path498" />
+      </g>
+      <g
+         clip-path="url(#clip25)"
+         id="g569"
+         transform="matrix(1.0972197,0,0,1.0972197,-2307.6459,2712.7126)"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-1562.3926)"
+           id="g567"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text565"
+             style="fill:#333333">c__Actinobacteria</text>
+        </g>
+        <!-- transform -->
+      </g>
+      <g
+         fill="#ff00ff"
+         fill-rule="nonzero"
+         fill-opacity="1"
+         stroke="none"
+         id="g633"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2189.6298)">
+        <path
+           d="m 2081,-1425 h 80 v 35 h -80 z"
+           id="path631" />
+      </g>
+      <g
+         stroke-opacity="1"
+         fill="none"
+         stroke="#000000"
+         id="g639"
+         transform="matrix(0.82265841,0,0,0.82265841,-1713.5296,2189.6298)">
+        <path
+           d="m 2081,-1425 h 80 v 35 h -80 z"
+           id="path637" />
+      </g>
+      <g
+         clip-path="url(#clip29)"
+         id="g661"
+         transform="matrix(1.0972197,0,0,1.0972197,-1936.7176,2426.6478)"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-1337.3926)"
+           id="g659"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text657"
+             style="fill:#333333">c__Alphaproteobacteria</text>
+        </g>
+        <!-- transform -->
+      </g>
+      <g
+         clip-path="url(#clip30)"
+         id="g672"
+         transform="matrix(1.0972197,0,0,1.0972197,-1935.6593,1916.3681)"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-797.39258)"
+           id="g670"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text668"
+             style="fill:#333333">Other Classes</text>
+        </g>
+        <!-- transform -->
+      </g>
+      <g
+         clip-path="url(#clip31)"
+         id="g683"
+         transform="matrix(1.0972197,0,0,1.0972197,-1935.8259,2074.457)"
+         style="fill:#333333">
+        <g
+           transform="translate(2181,-977.39258)"
+           id="g681"
+           style="fill:#333333">
+          <text
+             font-weight="normal"
+             font-size="20px"
+             font-family="Helvetica"
+             font-style="normal"
+             fill="#000000"
+             fill-opacity="1"
+             stroke="none"
+             x="0"
+             y="0"
+             id="text679"
+             style="fill:#333333">c__Blastocatellia</text>
+        </g>
+        <!-- transform -->
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:26.7063px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:1.87275"
+         x="309.50964"
+         y="919.53369"
+         id="text5127"><tspan
+           sodipodi:role="line"
+           id="tspan5125"
+           x="309.50964"
+           y="919.53369"
+           style="fill:#333333;stroke-width:1.87275">Node Color: Bacterial Class</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:26.7063px;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#333333;stroke-width:1.87275"
+         x="931.47009"
+         y="922.96979"
+         id="text5127-2"><tspan
+           sodipodi:role="line"
+           id="tspan5125-2"
+           x="931.47009"
+           y="922.96979"
+           style="fill:#333333;stroke-width:1.87275">Edge Color: co-variance type</tspan></text>
+    </g>
+    <path
+       d="M 253.1108,840.44976 178.48732,816.20314"
+       id="path885"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1103.9275,764.20476 -21.836,-121.58077"
+       id="path891"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 122.40722,632.76813 18.904017,539.57341"
+       id="path897"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1138.5832,703.2715 -2.6156,24.14886"
+       id="path903"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 795.82491,712.19263 717.41459,820.11518"
+       id="path909"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 37.698748,619.68739 91.95726,497.82079"
+       id="path915"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 119.53229,639.22532 -75.111187,-7.8945"
+       id="path921"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1043.7339,631.6809 84.04,49.95341"
+       id="path927"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1130.3438,678.45036 -38.0433,-40.92648"
+       id="path933"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 853.49304,78.061453 757.52782,174.02665"
+       id="path939"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 195.85015,153.42586 106.69799,114.32013"
+       id="path945"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1010.2255,310.9858 55.3004,122.5583"
+       id="path951"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 593.56104,785.00214 969.5628,411.8356"
+       id="path957"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 981.2919,340.53039 -1.1673,46.80759"
+       id="path963"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 976.9178,387.61854 -1.1019,-5.45093"
+       id="path969"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 522.61148,720.32747 442.47375,830.62759"
+       id="path975"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 389.68774,145.51557 791.27857,48.153214"
+       id="path981"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 526.62142,858.32265 480.48069,186.49645"
+       id="path987"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 513.93443,868.2221 447.69598,846.69995"
+       id="path993"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 578.72117,802.31099 -42.66502,58.72334"
+       id="path999"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 388.55298,142.27776 507.19078,86.956031"
+       id="path1005"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 508.36762,72.744912 -73.534,-50.477718"
+       id="path1011"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 530.53568,90.892259 1063.9771,608.58462"
+       id="path1017"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1111.7487,642.44598 -15.8275,-9.40784"
+       id="path1023"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 743.2066,78.472321 V 168.09461"
+       id="path1029"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 988.7611,684.89892 73.1046,-50.67154"
+       id="path1035"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1022.3474,635.52193 -36.9416,45.7674"
+       id="path1041"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1048.8796,774.74582 -62.5605,-67.3017"
+       id="path1047"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 205.68706,249.04564 959.5515,686.07857"
+       id="path1053"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 266.18766,690.73881 40.93763,56.34578"
+       id="path1059"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 479.74394,42.711984 -94.64,94.639986"
+       id="path1065"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 487.16975,46.042596 480.35824,163.66903"
+       id="path1071"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 788.87527,857.70972 722.63683,836.18757"
+       id="path1077"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 1043.4894,789.59217 723.22763,829.94801"
+       id="path1083"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1120.1217,410.17308 -76.9684,34.72945"
+       id="path1089"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 62.44398,140.61838 83.52765,118.86764"
+       id="path1095"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 987.2531,730.62053 38.6116,-93.00793"
+       id="path1101"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 1045.7843,778.58067 992.6992,747.02683"
+       id="path1107"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 985.6487,376.32599 73.7348,61.87081"
+       id="path1113"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1132.3869,378.13107 -48.6103,57.93161"
+       id="path1119"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1024.7336,437.12603 31.1345,7.9278"
+       id="path1125"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 59.97512,138.57788 5.61212,-8.0039"
+       id="path1131"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 1012.957,764.47079 994.1163,659.56739"
+       id="path1137"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1043.8948,783.13223 -17.8369,-4.56766"
+       id="path1143"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 105.81987,472.75456 215.17249,309.95084"
+       id="path1149"
+       style="fill:none;stroke:#b2182b;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <path
+       d="m 770.1663,962.57592 136.68636,-0.11781"
+       id="path1149-7"
+       style="fill:none;stroke:#b2182b;stroke-width:4.35832;stroke-linecap:round;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <!-- transform -->
+    <path
+       d="m 723.37322,192.45052 -481.5911,99.6199"
+       id="path1155"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 64.19619,167.77096 211.2777,284.79742"
+       id="path1161"
+       style="fill:none;stroke:#2166ac;stroke-width:3.34811;stroke-linecap:round;stroke-opacity:1" />
+    <path
+       d="m 769.47274,1006.7726 137.21432,0.022"
+       id="path1161-1"
+       style="fill:none;stroke:#2166ac;stroke-width:4.35832;stroke-linecap:round;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <!-- transform -->
+    <path
+       d="m 721.94267,137.01217 13.51334,32.62413"
+       id="path1167"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 414.63512,165.25921 384.30957,52.082663"
+       id="path1173"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1128.0847,349.63646 -19.3861,76.13381"
+       id="path1179"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 175.85086,231.47009 65.72613,165.56174"
+       id="path1185"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 68.23024,151.30428 344.13332,97.788855"
+       id="path1191"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1118.5553,343.31196 -97.8094,74.08775"
+       id="path1197"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 435.03582,188.79266 980.9352,422.2828"
+       id="path1203"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1071.4984,296.34615 -58.6592,114.41906"
+       id="path1209"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 979.5063,380.97869 13.2138,29.28477"
+       id="path1215"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1131.9255,350.16648 -1.0941,43.86965"
+       id="path1221"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 507.08968,134.93408 372.13161,98.772166"
+       id="path1227"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 409.18529,167.80054 366.49137,106.82729"
+       id="path1233"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1135.7879,349.82857 1.6843,8.3315"
+       id="path1239"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 972.0126,335.36777 335.96753,752.36531"
+       id="path1245"
+       style="fill:none;stroke:#8cbcd8;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 404.93328,172.05255 -17.88934,-12.5263"
+       id="path1251"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 713.95978,740.22182 80.13773,110.30013"
+       id="path1257"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 855.38943,789.421 810.997,850.52195"
+       id="path1263"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 434.02401,752.35718 v 75.52491"
+       id="path1269"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 206.93467,195.94056 196.64868,224.0985"
+       id="path1275"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="M 45.199705,369.22901 28.221711,385.5817"
+       id="path1281"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 208.97643,196.47888 -0.77043,4.61676"
+       id="path1287"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1050.5594,288.06232 51.0702,13.00407"
+       id="path1293"
+       style="fill:none;stroke:#2166ac;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 1050.9095,285.52536 14.3733,0.35845"
+       id="path1299"
+       style="fill:none;stroke:#b2182b;stroke-width:1.11604;stroke-linecap:round;stroke-opacity:1" />
+    <!-- transform -->
+    <path
+       d="m 83.80066,380.12575 c 0,2.69662 -2.18604,4.88266 -4.88266,4.88266 -2.69659,0 -4.88265,-2.18604 -4.88265,-4.88266 0,-2.69662 2.18606,-4.88265 4.88265,-4.88265 2.69662,0 4.88266,2.18603 4.88266,4.88265 z"
+       id="path1305"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 69.263535,370.47126 h 19.30895 v 19.30896 h -19.30895 z"
+       id="path1311"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 69.263535,370.47126 h 19.30895 v 19.30896 h -19.30895 z"
+       id="path1317"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="63.425671"
+       y="382.60925"
+       id="text1323"
+       style="stroke-width:0.612984">ASV_266</text>
+    <!-- transform -->
+    <path
+       d="m 78.86117,244.75256 c 0,6.31632 -5.1204,11.43672 -11.43671,11.43672 -6.31634,0 -11.43674,-5.1204 -11.43674,-11.43672 0,-6.31633 5.1204,-11.43672 11.43674,-11.43672 6.31631,0 11.43671,5.12039 11.43671,11.43672 z"
+       id="path1327"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 44.810599,222.13871 h 45.227663 v 45.22767 H 44.8106 Z"
+       id="path1333"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 44.810599,222.13871 h 45.227663 v 45.22767 H 44.8106 Z"
+       id="path1339"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="51.938931"
+       y="247.23604"
+       id="text1345"
+       style="stroke-width:0.612984">ASV_120</text>
+    <!-- transform -->
+    <path
+       d="m 48.73533,409.8852 c 0,2.69661 -2.186031,4.88265 -4.882652,4.88265 -2.69662,0 -4.882654,-2.18604 -4.882654,-4.88265 0,-2.69662 2.186034,-4.88266 4.882654,-4.88266 2.696621,0 4.882652,2.18604 4.882652,4.88266 z"
+       id="path1349"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 34.198205,400.23071 h 19.30895 v 19.30896 h -19.30895 z"
+       id="path1355"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 34.198205,400.23071 h 19.30895 v 19.30896 h -19.30895 z"
+       id="path1361"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="28.687136"
+       y="412.36868"
+       id="text1367"
+       style="stroke-width:0.612984">ASV_161</text>
+    <!-- transform -->
+    <path
+       d="m 113.78649,261.85081 c 0,11.18557 -9.0677,20.25327 -20.25328,20.25327 -11.18557,0 -20.25328,-9.0677 -20.25328,-20.25327 0,-11.18557 9.06771,-20.25326 20.25328,-20.25326 11.18558,0 20.25328,9.06769 20.25328,20.25326 z"
+       id="path1371"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 53.486426,221.80401 H 133.58 v 80.09358 H 53.486426 Z"
+       id="path1377"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 53.486426,221.80401 H 133.58 v 80.09358 H 53.486426 Z"
+       id="path1383"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="80.074593"
+       y="264.33429"
+       id="text1389"
+       style="stroke-width:0.612984">ASV_94</text>
+    <!-- transform -->
+    <path
+       d="m 187.31276,115.12512 c 0,7.93942 -6.43614,14.37557 -14.37556,14.37557 -7.93942,0 -14.3756,-6.43615 -14.3756,-14.37557 0,-7.93942 6.43618,-14.37559 14.3756,-14.37559 7.93942,0 14.37556,6.43617 14.37556,14.37559 z"
+       id="path1393"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 144.51237,86.700284 h 56.8496 v 56.849606 h -56.8496 z"
+       id="path1399"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 144.51237,86.700284 h 56.8496 v 56.849606 h -56.8496 z"
+       id="path1405"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="157.45364"
+       y="117.60859"
+       id="text1411"
+       style="stroke-width:0.612984">ASV_458</text>
+    <!-- transform -->
+    <path
+       d="m 134.61966,268.61492 c 0,7.93941 -6.43618,14.37557 -14.37557,14.37557 -7.93942,0 -14.37556,-6.43616 -14.37556,-14.37557 0,-7.93941 6.43614,-14.37557 14.37556,-14.37557 7.93939,0 14.37557,6.43616 14.37557,14.37557 z"
+       id="path1415"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 91.819278,240.19012 h 56.849602 v 56.8496 H 91.819278 Z"
+       id="path1421"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 91.819278,240.19012 h 56.849602 v 56.8496 H 91.819278 Z"
+       id="path1427"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="107.124"
+       y="271.09842"
+       id="text1433"
+       style="stroke-width:0.612984">ASV_51</text>
+    <!-- transform -->
+    <path
+       d="m 182.36527,550.52941 c 0,6.31633 -5.1204,11.43672 -11.43671,11.43672 -6.31634,0 -11.43674,-5.12039 -11.43674,-11.43672 0,-6.31633 5.1204,-11.43672 11.43674,-11.43672 6.31631,0 11.43671,5.12039 11.43671,11.43672 z"
+       id="path1437"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 148.31469,527.91558 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path1443"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 148.31469,527.91558 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path1449"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="155.45381"
+       y="553.01288"
+       id="text1455"
+       style="stroke-width:0.612984">ASV_309</text>
+    <!-- transform -->
+    <path
+       d="m 173.77397,264.46335 c 0,9.56248 -7.75192,17.31441 -17.31442,17.31441 -9.5625,0 -17.31442,-7.75193 -17.31442,-17.31441 0,-9.56249 7.75192,-17.31442 17.31442,-17.31442 9.5625,0 17.31442,7.75193 17.31442,17.31442 z"
+       id="path1459"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 122.22374,230.22754 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path1465"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 122.22374,230.22754 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path1471"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="143.01953"
+       y="266.94684"
+       id="text1477"
+       style="stroke-width:0.612984">ASV_15</text>
+    <!-- transform -->
+    <path
+       d="m 176.10822,714.27063 c 0,4.69325 -3.80462,8.49788 -8.49786,8.49788 -4.69326,0 -8.49788,-3.80463 -8.49788,-8.49788 0,-4.69325 3.80462,-8.49787 8.49788,-8.49787 4.69324,0 8.49786,3.80462 8.49786,8.49787 z"
+       id="path1481"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 150.80747,697.46776 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1487"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 150.80747,697.46776 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1493"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="152.12288"
+       y="716.75409"
+       id="text1499"
+       style="stroke-width:0.612984">ASV_142</text>
+    <!-- transform -->
+    <path
+       d="m 149.69785,181.46341 c 0,14.43173 -11.69923,26.13093 -26.13096,26.13093 -14.43173,0 -26.13096,-11.6992 -26.13096,-26.13093 0,-14.43174 11.69923,-26.13097 26.13096,-26.13097 14.43173,0 26.13096,11.69923 26.13096,26.13097 z"
+       id="path1503"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 71.89812,129.79463 H 175.23564 V 233.13215 H 71.89812 Z"
+       id="path1509"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 71.89812,129.79463 H 175.23564 V 233.13215 H 71.89812 Z"
+       id="path1515"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="110.12881"
+       y="183.94688"
+       id="text1521"
+       style="stroke-width:0.612984">ASV_13</text>
+    <!-- transform -->
+    <path
+       d="m 159.14069,104.05679 c 0,6.31634 -5.1204,11.43674 -11.43674,11.43674 -6.31632,0 -11.43671,-5.1204 -11.43671,-11.43674 0,-6.316315 5.12039,-11.436713 11.43671,-11.436713 6.31634,0 11.43674,5.120398 11.43674,11.436713 z"
+       id="path1525"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 125.09013,81.442932 H 170.3178 V 126.67059 H 125.09013 Z"
+       id="path1531"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 125.09013,81.442932 H 170.3178 V 126.67059 H 125.09013 Z"
+       id="path1537"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="130.16617"
+       y="106.54025"
+       id="text1543"
+       style="stroke-width:0.612984">ASV_1026</text>
+    <!-- transform -->
+    <path
+       d="m 816.76888,212.86381 c 0,7.93942 -6.43616,14.37558 -14.37557,14.37558 -7.93941,0 -14.37557,-6.43616 -14.37557,-14.37558 0,-7.93939 6.43616,-14.37557 14.37557,-14.37557 7.93941,0 14.37557,6.43618 14.37557,14.37557 z"
+       id="path1547"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 773.96851,184.439 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1553"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 773.96851,184.439 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1559"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="788.95331"
+       y="215.34731"
+       id="text1565"
+       style="stroke-width:0.612984">ASV_90</text>
+    <!-- transform -->
+    <path
+       d="m 128.74198,101.78142 c 0,4.69326 -3.80465,8.49788 -8.49789,8.49788 -4.69326,0 -8.49788,-3.80462 -8.49788,-8.49788 0,-4.693267 3.80462,-8.497888 8.49788,-8.497888 4.69324,0 8.49789,3.804621 8.49789,8.497888 z"
+       id="path1569"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 103.44122,84.978562 h 33.60572 v 33.605698 h -33.60572 z"
+       id="path1575"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 103.44122,84.978562 h 33.60572 v 33.605698 h -33.60572 z"
+       id="path1581"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="104.75174"
+       y="104.26489"
+       id="text1587"
+       style="stroke-width:0.612984">ASV_346</text>
+    <!-- transform -->
+    <path
+       d="m 873.01675,188.34786 c 0,6.31635 -5.1204,11.43674 -11.43673,11.43674 -6.31632,0 -11.43672,-5.12039 -11.43672,-11.43674 0,-6.31631 5.1204,-11.43671 11.43672,-11.43671 6.31633,0 11.43673,5.1204 11.43673,11.43671 z"
+       id="path1591"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 838.96621,165.73404 h 45.22765 v 45.22767 h -45.22765 z"
+       id="path1597"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 838.96621,165.73404 h 45.22765 v 45.22767 h -45.22765 z"
+       id="path1603"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="848.13806"
+       y="190.83138"
+       id="text1609"
+       style="stroke-width:0.612984">ASV_72</text>
+    <!-- transform -->
+    <path
+       d="m 179.04707,812.66899 c 0,6.31634 -5.1204,11.43674 -11.43671,11.43674 -6.31634,0 -11.43674,-5.1204 -11.43674,-11.43674 0,-6.31631 5.1204,-11.43671 11.43674,-11.43671 6.31631,0 11.43671,5.1204 11.43671,11.43671 z"
+       id="path1613"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 144.99649,790.0552 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path1619"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 144.99649,790.0552 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path1625"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="152.10625"
+       y="815.15247"
+       id="text1631"
+       style="stroke-width:0.612984">ASV_204</text>
+    <!-- transform -->
+    <path
+       d="m 897.5327,129.16119 c 0,6.31632 -5.1204,11.43671 -11.43674,11.43671 -6.31633,0 -11.43673,-5.12039 -11.43673,-11.43671 0,-6.31634 5.1204,-11.43674 11.43673,-11.43674 6.31634,0 11.43674,5.1204 11.43674,11.43674 z"
+       id="path1635"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 863.48213,106.54734 h 45.22765 v 45.22764 h -45.22765 z"
+       id="path1641"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 863.48213,106.54734 h 45.22765 v 45.22764 h -45.22765 z"
+       id="path1647"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="872.65399"
+       y="131.64465"
+       id="text1653"
+       style="stroke-width:0.612984">ASV_12</text>
+    <!-- transform -->
+    <path
+       d="m 1113.9276,772.5688 c 0,4.69325 -3.8046,8.49787 -8.4979,8.49787 -4.6932,0 -8.4978,-3.80462 -8.4978,-8.49787 0,-4.69325 3.8046,-8.49788 8.4978,-8.49788 4.6933,0 8.4979,3.80463 8.4979,8.49788 z"
+       id="path1657"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1088.6269,755.76593 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path1663"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1088.6269,755.76593 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path1669"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1088.1943"
+       y="775.05225"
+       id="text1675"
+       style="stroke-width:0.612984">ASV_1110</text>
+    <!-- transform -->
+    <path
+       d="m 269.69065,843.07576 c 0,4.69327 -3.80465,8.49789 -8.49789,8.49789 -4.69326,0 -8.49788,-3.80462 -8.49788,-8.49789 0,-4.69323 3.80462,-8.49788 8.49788,-8.49788 4.69324,0 8.49789,3.80465 8.49789,8.49788 z"
+       id="path1679"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 244.38989,826.27291 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1685"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 244.38989,826.27291 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1691"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="247.73415"
+       y="845.5592"
+       id="text1697"
+       style="stroke-width:0.612984">ASV_97</text>
+    <!-- transform -->
+    <path
+       d="m 21.086703,533.88724 c 0,4.69324 -3.804621,8.49787 -8.497856,8.49787 -4.693235,0 -8.497855,-3.80463 -8.497855,-8.49787 0,-4.69325 3.80462,-8.49788 8.497855,-8.49788 4.693235,0 8.497856,3.80463 8.497856,8.49788 z"
+       id="path1701"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M -4.2140041,517.08437 H 29.391687 v 33.60572 H -4.2140041 Z"
+       id="path1707"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M -4.2140041,517.08437 H 29.391687 v 33.60572 H -4.2140041 Z"
+       id="path1713"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="-2.8858869"
+       y="536.37073"
+       id="text1719"
+       style="stroke-width:0.612984">ASV_149</text>
+    <!-- transform -->
+    <path
+       d="m 1143.5504,735.86882 c 0,4.69324 -3.8046,8.49787 -8.4979,8.49787 -4.6932,0 -8.4979,-3.80463 -8.4979,-8.49787 0,-4.69325 3.8047,-8.49788 8.4979,-8.49788 4.6933,0 8.4979,3.80463 8.4979,8.49788 z"
+       id="path1723"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1118.2496,719.06595 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path1729"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1118.2496,719.06595 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path1735"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1119.5653"
+       y="738.35229"
+       id="text1741"
+       style="stroke-width:0.612984">ASV_832</text>
+    <!-- transform -->
+    <path
+       d="m 813.98397,702.94013 c 0,6.31633 -5.1204,11.43672 -11.43672,11.43672 -6.31633,0 -11.43672,-5.12039 -11.43672,-11.43672 0,-6.31633 5.12039,-11.43672 11.43672,-11.43672 6.31632,0 11.43672,5.12039 11.43672,11.43672 z"
+       id="path1745"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 779.93343,680.32629 h 45.22765 v 45.22767 h -45.22765 z"
+       id="path1751"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 779.93343,680.32629 h 45.22765 v 45.22767 h -45.22765 z"
+       id="path1757"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="787.04315"
+       y="705.42358"
+       id="text1763"
+       style="stroke-width:0.612984">ASV_127</text>
+    <!-- transform -->
+    <path
+       d="m 44.483768,630.13536 c 0,6.31633 -5.120397,11.43672 -11.436739,11.43672 -6.316313,0 -11.436711,-5.12039 -11.436711,-11.43672 0,-6.31633 5.120398,-11.43673 11.436711,-11.43673 6.316342,0 11.436739,5.1204 11.436739,11.43673 z"
+       id="path1767"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 10.433184,607.52153 h 45.227658 v 45.22765 H 10.433184 Z"
+       id="path1773"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 10.433184,607.52153 h 45.227658 v 45.22765 H 10.433184 Z"
+       id="path1779"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="19.608952"
+       y="632.61884"
+       id="text1785"
+       style="stroke-width:0.612984">ASV_18</text>
+    <!-- transform -->
+    <path
+       d="m 1154.5068,688.97953 c 0,7.93941 -6.4361,14.37557 -14.3755,14.37557 -7.9395,0 -14.3756,-6.43616 -14.3756,-14.37557 0,-7.93941 6.4361,-14.37557 14.3756,-14.37557 7.9394,0 14.3755,6.43616 14.3755,14.37557 z"
+       id="path1789"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1111.7065,660.55472 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1795"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1111.7065,660.55472 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1801"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1124.6477"
+       y="691.46301"
+       id="text1807"
+       style="stroke-width:0.612984">ASV_808</text>
+    <!-- transform -->
+    <path
+       d="m 873.01675,69.974466 c 0,6.316313 -5.1204,11.436711 -11.43673,11.436711 -6.31632,0 -11.43672,-5.120398 -11.43672,-11.436711 0,-6.316341 5.1204,-11.436739 11.43672,-11.436739 6.31633,0 11.43673,5.120398 11.43673,11.436739 z"
+       id="path1811"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 838.96621,47.360605 h 45.22765 v 45.227658 h -45.22765 z"
+       id="path1817"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 838.96621,47.360605 h 45.22765 v 45.227658 h -45.22765 z"
+       id="path1823"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="846.09259"
+       y="72.457924"
+       id="text1829"
+       style="stroke-width:0.612984">ASV_342</text>
+    <!-- transform -->
+    <path
+       d="m 142.34307,640.42079 c 0,6.31632 -5.1204,11.43671 -11.43671,11.43671 -6.31634,0 -11.43674,-5.12039 -11.43674,-11.43671 0,-6.31633 5.1204,-11.43672 11.43674,-11.43672 6.31631,0 11.43671,5.12039 11.43671,11.43672 z"
+       id="path1833"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 108.29254,617.80695 h 45.22765 v 45.22765 h -45.22765 z"
+       id="path1839"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 108.29254,617.80695 h 45.22765 v 45.22765 h -45.22765 z"
+       id="path1845"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="117.46632"
+       y="642.90424"
+       id="text1851"
+       style="stroke-width:0.612984">ASV_10</text>
+    <!-- transform -->
+    <path
+       d="m 217.76033,158.01997 c 0,6.31631 -5.1204,11.43671 -11.43671,11.43671 -6.31635,0 -11.43674,-5.1204 -11.43674,-11.43671 0,-6.31634 5.12039,-11.43674 11.43674,-11.43674 6.31631,0 11.43671,5.1204 11.43671,11.43674 z"
+       id="path1855"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 183.70978,135.40613 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path1861"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 183.70978,135.40613 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path1867"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="190.83812"
+       y="160.50348"
+       id="text1873"
+       style="stroke-width:0.612984">ASV_660</text>
+    <!-- transform -->
+    <path
+       d="m 1016.9584,300.56117 c 0,6.31633 -5.1204,11.43672 -11.4367,11.43672 -6.3163,0 -11.4367,-5.12039 -11.4367,-11.43672 0,-6.31633 5.1204,-11.43672 11.4367,-11.43672 6.3163,0 11.4367,5.12039 11.4367,11.43672 z"
+       id="path1877"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 982.90797,277.94732 h 45.22753 v 45.22767 h -45.22753 z"
+       id="path1883"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 982.90797,277.94732 h 45.22753 v 45.22767 h -45.22753 z"
+       id="path1889"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="990.35614"
+       y="303.04465"
+       id="text1895"
+       style="stroke-width:0.612984">ASV_341</text>
+    <!-- transform -->
+    <path
+       d="m 994.1418,401.70908 c 0,7.93941 -6.4362,14.37558 -14.3755,14.37558 -7.9395,0 -14.3756,-6.43617 -14.3756,-14.37558 0,-7.9394 6.4361,-14.37557 14.3756,-14.37557 7.9393,0 14.3755,6.43617 14.3755,14.37557 z"
+       id="path1899"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 951.34152,373.28428 h 56.84958 v 56.8496 h -56.84958 z"
+       id="path1905"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 951.34152,373.28428 h 56.84958 v 56.8496 h -56.84958 z"
+       id="path1911"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="964.26215"
+       y="404.19257"
+       id="text1917"
+       style="stroke-width:0.612984">ASV_134</text>
+    <!-- transform -->
+    <path
+       d="m 536.10428,713.45254 c 0,4.69325 -3.80463,8.49788 -8.49788,8.49788 -4.69324,0 -8.49787,-3.80463 -8.49787,-8.49788 0,-4.69325 3.80463,-8.49787 8.49787,-8.49787 4.69325,0 8.49788,3.80462 8.49788,8.49787 z"
+       id="path1921"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 510.80355,696.64967 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1927"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 510.80355,696.64967 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1933"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="512.58856"
+       y="715.93597"
+       id="text1939"
+       style="stroke-width:0.612984">ASV_511</text>
+    <!-- transform -->
+    <path
+       d="m 813.83002,45.458547 c 0,6.316313 -5.12039,11.436711 -11.43672,11.436711 -6.31632,0 -11.43672,-5.120398 -11.43672,-11.436711 0,-6.316341 5.1204,-11.436739 11.43672,-11.436739 6.31633,0 11.43672,5.120398 11.43672,11.436739 z"
+       id="path1943"
+       style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 779.77948,22.84468 h 45.22765 v 45.227658 h -45.22765 z"
+       id="path1949"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 779.77948,22.84468 h 45.22765 v 45.227658 h -45.22765 z"
+       id="path1955"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="786.90979"
+       y="47.942001"
+       id="text1961"
+       style="stroke-width:0.612984">ASV_518</text>
+    <!-- transform -->
+    <path
+       d="m 541.98197,872.66443 c 0,7.93939 -6.43616,14.37556 -14.37557,14.37556 -7.9394,0 -14.37556,-6.43617 -14.37556,-14.37556 0,-7.93939 6.43616,-14.37557 14.37556,-14.37557 7.93941,0 14.37557,6.43618 14.37557,14.37557 z"
+       id="path1965"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 499.18161,844.23963 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1971"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 499.18161,844.23963 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path1977"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="514.16833"
+       y="875.14789"
+       id="text1983"
+       style="stroke-width:0.612984">ASV_23</text>
+    <!-- transform -->
+    <path
+       d="m 201.70719,133.78694 c 0,4.69323 -3.80462,8.49785 -8.49785,8.49785 -4.69324,0 -8.49786,-3.80462 -8.49786,-8.49785 0,-4.69324 3.80462,-8.49789 8.49786,-8.49789 4.69323,0 8.49785,3.80465 8.49785,8.49789 z"
+       id="path1987"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 176.40646,116.98408 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1993"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 176.40646,116.98408 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path1999"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="177.7346"
+       y="136.27043"
+       id="text2005"
+       style="stroke-width:0.612984">ASV_549</text>
+    <!-- transform -->
+    <path
+       d="m 534.59505,80.880642 c 0,7.939419 -6.43616,14.375567 -14.37557,14.375567 -7.93941,0 -14.37557,-6.436148 -14.37557,-14.375567 0,-7.939391 6.43616,-14.375567 14.37557,-14.375567 7.93941,0 14.37557,6.436176 14.37557,14.375567 z"
+       id="path2009"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 491.79468,52.455827 h 56.8496 v 56.849623 h -56.8496 z"
+       id="path2015"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 491.79468,52.455827 h 56.8496 v 56.849623 h -56.8496 z"
+       id="path2021"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="504.71536"
+       y="83.364128"
+       id="text2027"
+       style="stroke-width:0.612984">ASV_294</text>
+    <!-- transform -->
+    <path
+       d="m 596.88023,793.05847 c 0,6.31634 -5.12039,11.43674 -11.43672,11.43674 -6.31633,0 -11.43672,-5.1204 -11.43672,-11.43674 0,-6.31632 5.12039,-11.43671 11.43672,-11.43671 6.31633,0 11.43672,5.12039 11.43672,11.43671 z"
+       id="path2031"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 562.82967,770.44467 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path2037"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 562.82967,770.44467 h 45.22767 v 45.22765 h -45.22767 z"
+       id="path2043"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="574.05969"
+       y="795.54199"
+       id="text2049"
+       style="stroke-width:0.612984">ASV_9</text>
+    <!-- transform -->
+    <path
+       d="m 1127.5514,646.78798 c 0,4.69325 -3.8047,8.49787 -8.4979,8.49787 -4.6932,0 -8.4978,-3.80462 -8.4978,-8.49787 0,-4.69324 3.8046,-8.49787 8.4978,-8.49787 4.6932,0 8.4979,3.80463 8.4979,8.49787 z"
+       id="path2053"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1102.2507,629.98513 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2059"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1102.2507,629.98513 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2065"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1103.5496"
+       y="649.27142"
+       id="text2071"
+       style="stroke-width:0.612984">ASV_457</text>
+    <!-- transform -->
+    <path
+       d="m 751.70448,69.974466 c 0,4.693235 -3.80463,8.497855 -8.49788,8.497855 -4.69325,0 -8.49788,-3.80462 -8.49788,-8.497855 0,-4.693235 3.80463,-8.497883 8.49788,-8.497883 4.69325,0 8.49788,3.804648 8.49788,8.497883 z"
+       id="path2075"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 726.40374,53.171588 h 33.60572 V 86.77728 h -33.60572 z"
+       id="path2081"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 726.40374,53.171588 h 33.60572 V 86.77728 h -33.60572 z"
+       id="path2087"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="729.74792"
+       y="72.457924"
+       id="text2093"
+       style="stroke-width:0.612984">ASV_47</text>
+    <!-- transform -->
+    <path
+       d="m 991.8453,694.76243 c 0,9.56249 -7.752,17.31442 -17.3145,17.31442 -9.5624,0 -17.3144,-7.75193 -17.3144,-17.31442 0,-9.56249 7.752,-17.31441 17.3144,-17.31441 9.5625,0 17.3145,7.75192 17.3145,17.31441 z"
+       id="path2097"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 940.29504,660.52663 h 68.47176 v 68.4716 h -68.47176 z"
+       id="path2103"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 940.29504,660.52663 h 68.47176 v 68.4716 h -68.47176 z"
+       id="path2109"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="959.05609"
+       y="697.24591"
+       id="text2115"
+       style="stroke-width:0.612984">ASV_729</text>
+    <!-- transform -->
+    <path
+       d="m 269.69065,683.86388 c 0,4.69325 -3.80465,8.49787 -8.49789,8.49787 -4.69326,0 -8.49788,-3.80462 -8.49788,-8.49787 0,-4.69324 3.80462,-8.49787 8.49788,-8.49787 4.69324,0 8.49789,3.80463 8.49789,8.49787 z"
+       id="path2119"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 244.38989,667.06101 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2125"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 244.38989,667.06101 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2131"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="245.70531"
+       y="686.34735"
+       id="text2137"
+       style="stroke-width:0.612984">ASV_442</text>
+    <!-- transform -->
+    <path
+       d="m 499.26765,34.624997 c 0,6.316341 -5.1204,11.436739 -11.43672,11.436739 -6.31633,0 -11.43672,-5.120398 -11.43672,-11.436739 0,-6.316313 5.12039,-11.436711 11.43672,-11.436711 6.31632,0 11.43672,5.120398 11.43672,11.436711 z"
+       id="path2141"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 465.21709,12.011154 h 45.22767 v 45.227658 h -45.22767 z"
+       id="path2147"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 465.21709,12.011154 h 45.22767 v 45.227658 h -45.22767 z"
+       id="path2153"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="474.37234"
+       y="37.108475"
+       id="text2159"
+       style="stroke-width:0.612984">ASV_44</text>
+    <!-- transform -->
+    <path
+       d="m 723.34042,831.74524 c 0,7.93942 -6.43616,14.37557 -14.37557,14.37557 -7.93941,0 -14.37557,-6.43615 -14.37557,-14.37557 0,-7.93939 6.43616,-14.37553 14.37557,-14.37553 7.93941,0 14.37557,6.43614 14.37557,14.37553 z"
+       id="path2163"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 680.54005,803.32046 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2169"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 680.54005,803.32046 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2175"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="693.48132"
+       y="834.2287"
+       id="text2181"
+       style="stroke-width:0.612984">ASV_353</text>
+    <!-- transform -->
+    <path
+       d="m 1043.9053,448.3976 c 0,4.69324 -3.8046,8.49787 -8.4979,8.49787 -4.6932,0 -8.4978,-3.80463 -8.4978,-8.49787 0,-4.69325 3.8046,-8.49788 8.4978,-8.49788 4.6933,0 8.4979,3.80463 8.4979,8.49788 z"
+       id="path2185"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1018.6046,431.59473 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2191"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1018.6046,431.59473 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2197"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1017.8785"
+       y="450.8811"
+       id="text2203"
+       style="stroke-width:0.612984">ASV_1708</text>
+    <!-- transform -->
+    <path
+       d="m 107.90878,108.54551 c 0,7.93942 -6.43615,14.37559 -14.37557,14.37559 -7.93939,0 -14.37556,-6.43617 -14.37556,-14.37559 0,-7.93939 6.43617,-14.375567 14.37556,-14.375567 7.93942,0 14.37557,6.436177 14.37557,14.375567 z"
+       id="path2207"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 65.108404,80.120689 H 121.95801 V 136.9703 H 65.108404 Z"
+       id="path2213"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 65.108404,80.120689 H 121.95801 V 136.9703 H 65.108404 Z"
+       id="path2219"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="76.002266"
+       y="111.02898"
+       id="text2225"
+       style="stroke-width:0.612984">ASV_1215</text>
+    <!-- transform -->
+    <path
+       d="m 994.3048,741.18321 c 0,6.31632 -5.1204,11.43672 -11.4367,11.43672 -6.3164,0 -11.4368,-5.1204 -11.4368,-11.43672 0,-6.31633 5.1204,-11.43672 11.4368,-11.43672 6.3163,0 11.4367,5.12039 11.4367,11.43672 z"
+       id="path2229"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 960.25427,718.56938 h 45.22753 v 45.22765 h -45.22753 z"
+       id="path2235"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 960.25427,718.56938 h 45.22753 v 45.22765 h -45.22753 z"
+       id="path2241"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="967.70245"
+       y="743.66669"
+       id="text2247"
+       style="stroke-width:0.612984">ASV_261</text>
+    <!-- transform -->
+    <path
+       d="m 1089.9615,449.32629 c 0,9.56249 -7.7519,17.31442 -17.3144,17.31442 -9.5625,0 -17.3145,-7.75193 -17.3145,-17.31442 0,-9.56248 7.752,-17.31442 17.3145,-17.31442 9.5625,0 17.3144,7.75194 17.3144,17.31442 z"
+       id="path2251"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1038.4112,415.09049 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2257"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1038.4112,415.09049 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2263"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1057.1548"
+       y="451.80978"
+       id="text2269"
+       style="stroke-width:0.612984">ASV_646</text>
+    <!-- transform -->
+    <path
+       d="m 78.96379,123.61612 c 0,4.69323 -3.80462,8.49788 -8.49786,8.49788 -4.69326,0 -8.49788,-3.80465 -8.49788,-8.49788 0,-4.69324 3.80462,-8.49786 8.49788,-8.49786 4.69324,0 8.49786,3.80462 8.49786,8.49786 z"
+       id="path2273"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 53.663086,106.81327 h 33.605708 v 33.60572 H 53.663086 Z"
+       id="path2279"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 53.663086,106.81327 h 33.605708 v 33.60572 H 53.663086 Z"
+       id="path2285"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="54.982399"
+       y="126.09962"
+       id="text2291"
+       style="stroke-width:0.612984">ASV_588</text>
+    <!-- transform -->
+    <path
+       d="m 1026.4154,775.72741 c 0,6.31632 -5.1203,11.43672 -11.4367,11.43672 -6.3163,0 -11.4367,-5.1204 -11.4367,-11.43672 0,-6.31633 5.1204,-11.43672 11.4367,-11.43672 6.3164,0 11.4367,5.12039 11.4367,11.43672 z"
+       id="path2295"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 992.36497,753.11358 h 45.22753 v 45.22765 h -45.22753 z"
+       id="path2301"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 992.36497,753.11358 h 45.22753 v 45.22765 h -45.22753 z"
+       id="path2307"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1001.5318"
+       y="778.21088"
+       id="text2313"
+       style="stroke-width:0.612984">ASV_36</text>
+    <!-- transform -->
+    <path
+       d="m 1098.7646,622.68968 c 0,11.18557 -9.0677,20.25327 -20.2533,20.25327 -11.1856,0 -20.2533,-9.0677 -20.2533,-20.25327 0,-11.18557 9.0677,-20.25326 20.2533,-20.25326 11.1856,0 20.2533,9.06769 20.2533,20.25326 z"
+       id="path2317"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1038.4645,582.64289 h 80.0936 v 80.09358 h -80.0936 z"
+       id="path2323"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1038.4645,582.64289 h 80.0936 v 80.09358 h -80.0936 z"
+       id="path2329"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1060.9735"
+       y="625.17316"
+       id="text2335"
+       style="stroke-width:0.612984">ASV_1516</text>
+    <!-- transform -->
+    <path
+       d="m 242.14107,295.57775 c 0,9.56249 -7.75193,17.31442 -17.31443,17.31442 -9.56247,0 -17.31439,-7.75193 -17.31439,-17.31442 0,-9.56249 7.75192,-17.31442 17.31439,-17.31442 9.5625,0 17.31443,7.75193 17.31443,17.31442 z"
+       id="path2339"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 190.59085,261.34194 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2345"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 190.59085,261.34194 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2351"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="209.66112"
+       y="298.06125"
+       id="text2357"
+       style="stroke-width:0.612984">ASV_521</text>
+    <!-- transform -->
+    <path
+       d="m 1077.9824,787.42751 c 0,9.56247 -7.752,17.31442 -17.3145,17.31442 -9.5624,0 -17.3144,-7.75195 -17.3144,-17.31442 0,-9.5625 7.752,-17.31442 17.3144,-17.31442 9.5625,0 17.3145,7.75192 17.3145,17.31442 z"
+       id="path2361"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1026.432,753.19171 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2367"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1026.432,753.19171 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2373"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1049.2665"
+       y="789.91095"
+       id="text2379"
+       style="stroke-width:0.612984">ASV_6</text>
+    <!-- transform -->
+    <path
+       d="m 436.32545,17.457891 c 0,4.693236 -3.80462,8.497884 -8.49787,8.497884 -4.69324,0 -8.49787,-3.804648 -8.49787,-8.497884 0,-4.693263 3.80463,-8.4978829 8.49787,-8.4978829 4.69325,0 8.49787,3.8046199 8.49787,8.4978829 z"
+       id="path2383"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 411.02471,0.65502331 h 33.60572 V 34.260715 h -33.60572 z"
+       id="path2389"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 411.02471,0.65502331 h 33.60572 V 34.260715 h -33.60572 z"
+       id="path2395"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="412.32346"
+       y="19.94136"
+       id="text2401"
+       style="stroke-width:0.612984">ASV_797</text>
+    <!-- transform -->
+    <path
+       d="m 727.18854,129.16117 c 0,4.69326 -3.80463,8.49788 -8.49787,8.49788 -4.69325,0 -8.49788,-3.80462 -8.49788,-8.49788 0,-4.69327 3.80463,-8.49789 8.49788,-8.49789 4.69324,0 8.49787,3.80462 8.49787,8.49789 z"
+       id="path2405"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 701.88781,112.3583 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2411"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 701.88781,112.3583 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2417"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="705.25262"
+       y="131.64465"
+       id="text2423"
+       style="stroke-width:0.612984">ASV_38</text>
+    <!-- transform -->
+    <path
+       d="m 390.60803,43.874363 c 0,4.693235 -3.80463,8.497855 -8.49788,8.497855 -4.69324,0 -8.49787,-3.80462 -8.49787,-8.497855 0,-4.693236 3.80463,-8.497856 8.49787,-8.497856 4.69325,0 8.49788,3.80462 8.49788,8.497856 z"
+       id="path2427"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 365.30728,27.071525 H 398.913 v 33.605692 h -33.60572 z"
+       id="path2433"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 365.30728,27.071525 H 398.913 v 33.605692 h -33.60572 z"
+       id="path2439"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="366.62662"
+       y="46.357864"
+       id="text2445"
+       style="stroke-width:0.612984">ASV_433</text>
+    <!-- transform -->
+    <path
+       d="m 1115.0996,434.00536 c 0,4.69325 -3.8046,8.49788 -8.4979,8.49788 -4.6932,0 -8.4978,-3.80463 -8.4978,-8.49788 0,-4.69324 3.8046,-8.49787 8.4978,-8.49787 4.6933,0 8.4979,3.80463 8.4979,8.49787 z"
+       id="path2449"
+       style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1089.7989,417.2025 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2455"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1089.7989,417.2025 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path2461"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1091.1183"
+       y="436.48886"
+       id="text2467"
+       style="stroke-width:0.612984">ASV_858</text>
+    <!-- transform -->
+    <path
+       d="m 68.60079,155.16085 c 0,11.18555 -9.0677,20.25325 -20.25325,20.25325 -11.185577,0 -20.25328,-9.0677 -20.25328,-20.25325 0,-11.18557 9.067703,-20.25328 20.25328,-20.25328 11.18555,0 20.25325,9.06771 20.25325,20.25328 z"
+       id="path2471"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 8.3007577,115.11402 H 88.394323 V 195.2076 H 8.3007577 Z"
+       id="path2477"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 8.3007577,115.11402 H 88.394323 V 195.2076 H 8.3007577 Z"
+       id="path2483"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="34.907516"
+       y="157.64432"
+       id="text2489"
+       style="stroke-width:0.612984">ASV_40</text>
+    <!-- transform -->
+    <path
+       d="m 1025.4508,431.40321 c 0,12.80865 -10.3835,23.19212 -23.1921,23.19212 -12.8087,0 -23.1921,-10.38347 -23.1921,-23.19212 0,-12.80865 10.3834,-23.19212 23.1921,-23.19212 12.8086,0 23.1921,10.38347 23.1921,23.19212 z"
+       id="path2493"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 956.40093,385.54544 h 91.71557 v 91.71552 h -91.71557 z"
+       id="path2499"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 956.40093,385.54544 h 91.71557 v 91.71552 h -91.71557 z"
+       id="path2505"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="986.78394"
+       y="433.88669"
+       id="text2511"
+       style="stroke-width:0.612984">ASV_399</text>
+    <!-- transform -->
+    <path
+       d="m 1141.983,405.4693 c 0,6.31633 -5.1204,11.43672 -11.4367,11.43672 -6.3163,0 -11.4367,-5.12039 -11.4367,-11.43672 0,-6.31632 5.1204,-11.43672 11.4367,-11.43672 6.3163,0 11.4367,5.1204 11.4367,11.43672 z"
+       id="path2515"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1107.9325,382.85546 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path2521"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1107.9325,382.85546 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path2527"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1115.0424"
+       y="407.95279"
+       id="text2533"
+       style="stroke-width:0.612984">ASV_377</text>
+    <!-- transform -->
+    <path
+       d="m 1001.112,651.20335 c 0,4.69324 -3.8047,8.49787 -8.4979,8.49787 -4.6933,0 -8.4979,-3.80463 -8.4979,-8.49787 0,-4.69325 3.8046,-8.49788 8.4979,-8.49788 4.6932,0 8.4979,3.80463 8.4979,8.49788 z"
+       id="path2537"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 975.81123,634.40049 h 33.60577 v 33.60572 h -33.60577 z"
+       id="path2543"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 975.81123,634.40049 h 33.60577 v 33.60572 h -33.60577 z"
+       id="path2549"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="977.44855"
+       y="653.68683"
+       id="text2555"
+       style="stroke-width:0.612984">ASV_961</text>
+    <!-- transform -->
+    <path
+       d="m 372.62144,95.0515 c 0,7.93942 -6.43616,14.37559 -14.37557,14.37559 -7.9394,0 -14.37557,-6.43617 -14.37557,-14.37559 0,-7.939419 6.43617,-14.375567 14.37557,-14.375567 7.93941,0 14.37557,6.436148 14.37557,14.375567 z"
+       id="path2559"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 329.82106,66.626699 h 56.8496 v 56.849611 h -56.8496 z"
+       id="path2565"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 329.82106,66.626699 h 56.8496 v 56.849611 h -56.8496 z"
+       id="path2571"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="342.76233"
+       y="97.534996"
+       id="text2577"
+       style="stroke-width:0.612984">ASV_223</text>
+    <!-- transform -->
+    <path
+       d="m 1151.175,369.37003 c 0,6.31633 -5.1204,11.43672 -11.4367,11.43672 -6.3163,0 -11.4367,-5.12039 -11.4367,-11.43672 0,-6.31633 5.1204,-11.43672 11.4367,-11.43672 6.3163,0 11.4367,5.12039 11.4367,11.43672 z"
+       id="path2581"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1117.1245,346.75619 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path2587"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1117.1245,346.75619 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path2593"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1124.2529"
+       y="371.85352"
+       id="text2599"
+       style="stroke-width:0.612984">ASV_365</text>
+    <!-- transform -->
+    <path
+       d="m 339.28313,763.46982 c 0,11.18557 -9.0677,20.25326 -20.25326,20.25326 -11.18557,0 -20.25328,-9.06769 -20.25328,-20.25326 0,-11.18557 9.06771,-20.25326 20.25328,-20.25326 11.18556,0 20.25326,9.06769 20.25326,20.25326 z"
+       id="path2603"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 278.98308,723.42303 h 80.09358 v 80.09358 h -80.09358 z"
+       id="path2609"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 278.98308,723.42303 h 80.09358 v 80.09358 h -80.09358 z"
+       id="path2615"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="301.48032"
+       y="765.95331"
+       id="text2621"
+       style="stroke-width:0.612984">ASV_1094</text>
+    <!-- transform -->
+    <path
+       d="m 390.17521,149.59513 c 0,9.56247 -7.75193,17.31442 -17.31442,17.31442 -9.56249,0 -17.31442,-7.75195 -17.31442,-17.31442 0,-9.5625 7.75193,-17.31442 17.31442,-17.31442 9.56249,0 17.31442,7.75192 17.31442,17.31442 z"
+       id="path2625"
+       style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 338.62499,115.35931 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2631"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 338.62499,115.35931 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2637"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="359.42078"
+       y="152.07861"
+       id="text2643"
+       style="stroke-width:0.612984">ASV_65</text>
+    <!-- transform -->
+    <path
+       d="m 1149.6716,332.85744 c 0,9.56249 -7.7519,17.31442 -17.3144,17.31442 -9.5625,0 -17.3144,-7.75193 -17.3144,-17.31442 0,-9.56248 7.7519,-17.31442 17.3144,-17.31442 9.5625,0 17.3144,7.75194 17.3144,17.31442 z"
+       id="path2647"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1098.1213,298.62164 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2653"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1098.1213,298.62164 h 68.4718 v 68.4716 h -68.4718 z"
+       id="path2659"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1116.8737"
+       y="335.34094"
+       id="text2665"
+       style="stroke-width:0.612984">ASV_283</text>
+    <!-- transform -->
+    <path
+       d="m 993.0138,329.09723 c 0,6.31633 -5.1204,11.43672 -11.4368,11.43672 -6.3163,0 -11.4367,-5.12039 -11.4367,-11.43672 0,-6.31633 5.1204,-11.43672 11.4367,-11.43672 6.3164,0 11.4368,5.12039 11.4368,11.43672 z"
+       id="path2669"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 958.96338,306.48338 h 45.22742 v 45.22767 h -45.22742 z"
+       id="path2675"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 958.96338,306.48338 h 45.22742 v 45.22767 h -45.22742 z"
+       id="path2681"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="968.1391"
+       y="331.58072"
+       id="text2687"
+       style="stroke-width:0.612984">ASV_28</text>
+    <!-- transform -->
+    <path
+       d="m 436.43085,181.98367 c 0,9.5625 -7.75193,17.31443 -17.31442,17.31443 -9.56249,0 -17.31442,-7.75193 -17.31442,-17.31443 0,-9.56247 7.75193,-17.31442 17.31442,-17.31442 9.56249,0 17.31442,7.75195 17.31442,17.31442 z"
+       id="path2691"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 384.88063,147.74787 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2697"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 384.88063,147.74787 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2703"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="407.72186"
+       y="184.46716"
+       id="text2709"
+       style="stroke-width:0.612984">ASV_5</text>
+    <!-- transform -->
+    <path
+       d="m 1045.7521,624.33567 c 0,7.93941 -6.4362,14.37557 -14.3756,14.37557 -7.9394,0 -14.3755,-6.43616 -14.3755,-14.37557 0,-7.93941 6.4361,-14.37557 14.3755,-14.37557 7.9394,0 14.3756,6.43616 14.3756,14.37557 z"
+       id="path2713"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1002.9518,595.91087 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2719"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1002.9518,595.91087 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2725"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1015.8911"
+       y="626.81915"
+       id="text2731"
+       style="stroke-width:0.612984">ASV_710</text>
+    <!-- transform -->
+    <path
+       d="m 717.46272,733.34689 c 0,4.69324 -3.80462,8.49787 -8.49787,8.49787 -4.69325,0 -8.49788,-3.80463 -8.49788,-8.49787 0,-4.69325 3.80463,-8.49788 8.49788,-8.49788 4.69325,0 8.49787,3.80463 8.49787,8.49788 z"
+       id="path2735"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 692.16199,716.54404 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2741"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 692.16199,716.54404 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2747"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="695.51801"
+       y="735.83038"
+       id="text2753"
+       style="stroke-width:0.612984">ASV_26</text>
+    <!-- transform -->
+    <path
+       d="m 816.92283,862.15202 c 0,7.93942 -6.43617,14.37559 -14.37557,14.37559 -7.93941,0 -14.37557,-6.43617 -14.37557,-14.37559 0,-7.9394 6.43616,-14.37557 14.37557,-14.37557 7.9394,0 14.37557,6.43617 14.37557,14.37557 z"
+       id="path2757"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 774.12245,833.72721 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2763"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 774.12245,833.72721 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2769"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="789.10724"
+       y="864.6355"
+       id="text2775"
+       style="stroke-width:0.612984">ASV_30</text>
+    <!-- transform -->
+    <path
+       d="m 523.79587,137.13348 c 0,4.69326 -3.80463,8.49788 -8.49788,8.49788 -4.69324,0 -8.49787,-3.80462 -8.49787,-8.49788 0,-4.69324 3.80463,-8.49788 8.49787,-8.49788 4.69325,0 8.49788,3.80464 8.49788,8.49788 z"
+       id="path2779"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 498.49514,120.33062 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2785"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 498.49514,120.33062 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2791"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="499.80563"
+       y="139.61697"
+       id="text2797"
+       style="stroke-width:0.612984">ASV_176</text>
+    <!-- transform -->
+    <path
+       d="m 448.39957,842.25765 c 0,7.93942 -6.43616,14.3756 -14.37557,14.3756 -7.93941,0 -14.37557,-6.43618 -14.37557,-14.3756 0,-7.93941 6.43616,-14.37556 14.37557,-14.37556 7.93941,0 14.37557,6.43615 14.37557,14.37556 z"
+       id="path2801"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 405.59921,813.83284 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2807"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 405.59921,813.83284 h 56.8496 v 56.8496 h -56.8496 z"
+       id="path2813"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="418.54932"
+       y="844.74109"
+       id="text2819"
+       style="stroke-width:0.612984">ASV_629</text>
+    <!-- transform -->
+    <path
+       d="m 868.88223,782.54608 c 0,4.69324 -3.80463,8.49789 -8.49788,8.49789 -4.69325,0 -8.49787,-3.80465 -8.49787,-8.49789 0,-4.69326 3.80462,-8.49788 8.49787,-8.49788 4.69325,0 8.49788,3.80462 8.49788,8.49788 z"
+       id="path2823"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 843.58151,765.74322 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2829"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 843.58151,765.74322 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2835"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="848.99176"
+       y="785.02954"
+       id="text2841"
+       style="stroke-width:0.612984">ASV_3</text>
+    <!-- transform -->
+    <path
+       d="m 442.52187,743.85931 c 0,4.69325 -3.80463,8.49787 -8.49787,8.49787 -4.69325,0 -8.49787,-3.80462 -8.49787,-8.49787 0,-4.69325 3.80462,-8.49787 8.49787,-8.49787 4.69324,0 8.49787,3.80462 8.49787,8.49787 z"
+       id="path2845"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 417.22115,727.05646 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2851"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 417.22115,727.05646 h 33.60572 v 33.60572 h -33.60572 z"
+       id="path2857"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="418.5405"
+       y="746.34277"
+       id="text2863"
+       style="stroke-width:0.612984">ASV_173</text>
+    <!-- transform -->
+    <path
+       d="m 491.13379,175.0866 c 0,6.31634 -5.1204,11.43674 -11.43673,11.43674 -6.31632,0 -11.43672,-5.1204 -11.43672,-11.43674 0,-6.31631 5.1204,-11.43671 11.43672,-11.43671 6.31633,0 11.43673,5.1204 11.43673,11.43671 z"
+       id="path2867"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 457.08323,152.47274 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path2873"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 457.08323,152.47274 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path2879"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="464.21356"
+       y="177.57007"
+       id="text2885"
+       style="stroke-width:0.612984">ASV_268</text>
+    <!-- transform -->
+    <path
+       d="m 208.02217,240.36178 c 0,9.56249 -7.75193,17.31442 -17.31443,17.31442 -9.56249,0 -17.31442,-7.75193 -17.31442,-17.31442 0,-9.56249 7.75193,-17.31442 17.31442,-17.31442 9.5625,0 17.31443,7.75193 17.31443,17.31442 z"
+       id="path2889"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 156.47194,206.12597 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2895"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 156.47194,206.12597 h 68.4716 v 68.4716 h -68.4716 z"
+       id="path2901"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="177.24913"
+       y="242.84528"
+       id="text2907"
+       style="stroke-width:0.612984">ASV_37</text>
+    <!-- transform -->
+    <path
+       d="m 29.587683,388.96889 c 0,2.69662 -2.186034,4.88266 -4.882655,4.88266 -2.69662,0 -4.882654,-2.18604 -4.882654,-4.88266 0,-2.69661 2.186034,-4.88265 4.882654,-4.88265 2.696621,0 4.882655,2.18604 4.882655,4.88265 z"
+       id="path2911"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="M 15.050544,379.31441 H 34.35949 v 19.30896 H 15.050544 Z"
+       id="path2917"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="M 15.050544,379.31441 H 34.35949 v 19.30896 H 15.050544 Z"
+       id="path2923"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="9.2214842"
+       y="391.45239"
+       id="text2929"
+       style="stroke-width:0.612984">ASV_773</text>
+    <!-- transform -->
+    <path
+       d="m 112.1799,484.68806 c 0,7.9394 -6.43615,14.37556 -14.37557,14.37556 -7.93941,0 -14.37559,-6.43616 -14.37559,-14.37556 0,-7.93941 6.43618,-14.37557 14.37559,-14.37557 7.93942,0 14.37557,6.43616 14.37557,14.37557 z"
+       id="path2933"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 69.379504,456.26325 h 56.849606 v 56.8496 H 69.379504 Z"
+       id="path2939"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 69.379504,456.26325 h 56.849606 v 56.8496 H 69.379504 Z"
+       id="path2945"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="82.300232"
+       y="487.17154"
+       id="text2951"
+       style="stroke-width:0.612984">ASV_154</text>
+    <!-- transform -->
+    <path
+       d="m 217.76033,212.37638 c 0,6.31631 -5.1204,11.43671 -11.43671,11.43671 -6.31635,0 -11.43674,-5.1204 -11.43674,-11.43671 0,-6.31634 5.12039,-11.43671 11.43674,-11.43671 6.31631,0 11.43671,5.12037 11.43671,11.43671 z"
+       id="path2955"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 183.70978,189.76252 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path2961"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 183.70978,189.76252 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path2967"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="192.89436"
+       y="214.85985"
+       id="text2973"
+       style="stroke-width:0.612984">ASV_19</text>
+    <!-- transform -->
+    <path
+       d="m 53.59907,365.84181 c 0,2.69662 -2.18606,4.88266 -4.88265,4.88266 -2.696624,0 -4.882658,-2.18604 -4.882658,-4.88266 0,-2.69661 2.186034,-4.88265 4.882658,-4.88265 2.69659,0 4.88265,2.18604 4.88265,4.88265 z"
+       id="path2977"
+       style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 39.061926,356.18733 h 19.308949 v 19.30896 H 39.061926 Z"
+       id="path2983"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 39.061926,356.18733 h 19.308949 v 19.30896 H 39.061926 Z"
+       id="path2989"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="33.228943"
+       y="368.32532"
+       id="text2995"
+       style="stroke-width:0.612984">ASV_172</text>
+    <!-- transform -->
+    <path
+       d="m 763.45987,188.34789 c 0,11.18558 -9.06769,20.25328 -20.25327,20.25328 -11.18557,0 -20.25327,-9.0677 -20.25327,-20.25328 0,-11.18557 9.0677,-20.25328 20.25327,-20.25328 11.18558,0 20.25327,9.06771 20.25327,20.25328 z"
+       id="path2999"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 703.15981,148.30109 h 80.09358 v 80.09358 h -80.09358 z"
+       id="path3005"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 703.15981,148.30109 h 80.09358 v 80.09358 h -80.09358 z"
+       id="path3011"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="727.70251"
+       y="190.83138"
+       id="text3017"
+       style="stroke-width:0.612984">ASV_384</text>
+    <!-- transform -->
+    <path
+       d="m 222.29556,185.19816 c 0,6.31631 -5.1204,11.43671 -11.43674,11.43671 -6.31631,0 -11.43671,-5.1204 -11.43671,-11.43671 0,-6.31634 5.1204,-11.43674 11.43671,-11.43674 6.31634,0 11.43674,5.1204 11.43674,11.43674 z"
+       id="path3021"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 188.24497,162.58429 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path3027"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 188.24497,162.58429 h 45.22767 v 45.22767 h -45.22767 z"
+       id="path3033"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="199.4623"
+       y="187.68163"
+       id="text3039"
+       style="stroke-width:0.612984">ASV_2</text>
+    <!-- transform -->
+    <path
+       d="m 1118.3626,303.16331 c 0,4.69325 -3.8046,8.49788 -8.4979,8.49788 -4.6932,0 -8.4978,-3.80463 -8.4978,-8.49788 0,-4.69325 3.8046,-8.49787 8.4978,-8.49787 4.6933,0 8.4979,3.80462 8.4979,8.49787 z"
+       id="path3043"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1093.0619,286.36045 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path3049"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1093.0619,286.36045 h 33.6057 v 33.60572 h -33.6057 z"
+       id="path3055"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1094.3724"
+       y="305.64682"
+       id="text3061"
+       style="stroke-width:0.612984">ASV_516</text>
+    <!-- transform -->
+    <path
+       d="m 54.15566,191.47039 c 0,6.31634 -5.12036,11.43674 -11.436706,11.43674 -6.316313,0 -11.436711,-5.1204 -11.436711,-11.43674 0,-6.31631 5.120398,-11.43671 11.436711,-11.43671 6.316346,0 11.436706,5.1204 11.436706,11.43671 z"
+       id="path3065"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 20.105106,168.85654 h 45.227652 v 45.22767 H 20.105106 Z"
+       id="path3071"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 20.105106,168.85654 h 45.227652 v 45.22767 H 20.105106 Z"
+       id="path3077"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="27.235397"
+       y="193.95387"
+       id="text3083"
+       style="stroke-width:0.612984">ASV_158</text>
+    <!-- transform -->
+    <path
+       d="m 1088.1527,286.16893 c 0,6.31633 -5.1204,11.43673 -11.4368,11.43673 -6.3163,0 -11.4367,-5.1204 -11.4367,-11.43673 0,-6.31632 5.1204,-11.43672 11.4367,-11.43672 6.3164,0 11.4368,5.1204 11.4368,11.43672 z"
+       id="path3087"
+       style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1054.1022,263.55509 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path3093"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1054.1022,263.55509 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path3099"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1061.2119"
+       y="288.65244"
+       id="text3105"
+       style="stroke-width:0.612984">ASV_254</text>
+    <!-- transform -->
+    <path
+       d="m 62.28888,223.16003 c 0,7.93941 -6.43614,14.37558 -14.375535,14.37558 -7.939419,0 -14.375567,-6.43617 -14.375567,-14.37558 0,-7.9394 6.436148,-14.37555 14.375567,-14.37555 7.939395,0 14.375535,6.43615 14.375535,14.37555 z"
+       id="path3109"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 19.488512,194.73522 h 56.84963 v 56.8496 h -56.84963 z"
+       id="path3115"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 19.488512,194.73522 h 56.84963 v 56.8496 h -56.84963 z"
+       id="path3121"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="32.425873"
+       y="225.64351"
+       id="text3127"
+       style="stroke-width:0.612984">ASV_122</text>
+    <!-- transform -->
+    <path
+       d="m 1050.9131,285.24024 c 0,6.31633 -5.1204,11.43672 -11.4368,11.43672 -6.3163,0 -11.4367,-5.12039 -11.4367,-11.43672 0,-6.31633 5.1204,-11.43672 11.4367,-11.43672 6.3164,0 11.4368,5.12039 11.4368,11.43672 z"
+       id="path3131"
+       style="fill:#3333ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 1016.8625,262.62639 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path3137"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 1016.8625,262.62639 h 45.2276 v 45.22767 h -45.2276 z"
+       id="path3143"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="1023.9839"
+       y="287.72372"
+       id="text3149"
+       style="stroke-width:0.612984">ASV_166</text>
+    <!-- transform -->
+    <path
+       d="m 989.6995,365.1965 c 0,9.56249 -7.7519,17.31441 -17.3144,17.31441 -9.5625,0 -17.3144,-7.75192 -17.3144,-17.31441 0,-9.56249 7.7519,-17.31442 17.3144,-17.31442 9.5625,0 17.3144,7.75193 17.3144,17.31442 z"
+       id="path3153"
+       style="fill:#ef3b2c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.279009" />
+    <!-- transform -->
+    <path
+       d="m 938.14925,330.96069 h 68.47175 v 68.4716 h -68.47175 z"
+       id="path3159"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <path
+       d="m 938.14925,330.96069 h 68.47175 v 68.4716 h -68.47175 z"
+       id="path3165"
+       style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:0.306489" />
+    <!-- transform -->
+    <text
+       font-weight="normal"
+       font-size="7.35579px"
+       font-family="Helvetica"
+       font-style="normal"
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       x="957.21948"
+       y="367.67999"
+       id="text3171"
+       style="stroke-width:0.612984">ASV_391</text>
+    <!-- transform -->
+  </g>
+  <!-- default stroke -->
+</svg>
+<!-- bounding box -->
+
