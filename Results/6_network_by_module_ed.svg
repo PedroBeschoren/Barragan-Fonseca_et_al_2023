@@ -68,9 +68,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.64791815"
-     inkscape:cx="297.87713"
-     inkscape:cy="717.68324"
+     inkscape:zoom="0.91629464"
+     inkscape:cx="454.00244"
+     inkscape:cy="336.13642"
      inkscape:window-width="2880"
      inkscape:window-height="1586"
      inkscape:window-x="2509"
@@ -3493,6 +3493,105 @@
        id="text3171"
        style="stroke-width:0.612984">ASV_391</text>
     <!-- transform -->
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="20.379215"
+       y="65.715469"
+       id="text1980"><tspan
+         sodipodi:role="line"
+         id="tspan1978"
+         x="20.379215"
+         y="65.715469"
+         style="stroke-width:44.6219">Module 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="279.96249"
+       y="25.493578"
+       id="text1980-7"><tspan
+         sodipodi:role="line"
+         id="tspan1978-7"
+         x="279.96249"
+         y="25.493578"
+         style="stroke-width:44.6219">Module 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="1051.5483"
+       y="261.22562"
+       id="text1980-0"><tspan
+         sodipodi:role="line"
+         id="tspan1978-9"
+         x="1051.5483"
+         y="261.22562"
+         style="stroke-width:44.6219">Module 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="536.43018"
+       y="850.55573"
+       id="text1980-8"><tspan
+         sodipodi:role="line"
+         id="tspan1978-2"
+         x="536.43018"
+         y="850.55573"
+         style="stroke-width:44.6219">Module 7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="258.13547"
+       y="824.36328"
+       id="text1980-1"><tspan
+         sodipodi:role="line"
+         id="tspan1978-1"
+         x="258.13547"
+         y="824.36328"
+         style="stroke-width:44.6219">Module 8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="4.9417996"
+       y="679.21344"
+       id="text1980-19"><tspan
+         sodipodi:role="line"
+         id="tspan1978-0"
+         x="4.9417996"
+         y="679.21344"
+         style="stroke-width:44.6219">Module 9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="1055.9138"
+       y="596.27069"
+       id="text1980-15"><tspan
+         sodipodi:role="line"
+         id="tspan1978-02"
+         x="1055.9138"
+         y="596.27069"
+         style="stroke-width:44.6219">Module 5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="831.09521"
+       y="854.92108"
+       id="text1980-3"><tspan
+         sodipodi:role="line"
+         id="tspan1978-3"
+         x="831.09521"
+         y="854.92108"
+         style="stroke-width:44.6219">Module 6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:27.0416px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:44.6219"
+       x="661.93567"
+       y="35.315746"
+       id="text1980-2"><tspan
+         sodipodi:role="line"
+         id="tspan1978-72"
+         x="661.93567"
+         y="35.315746"
+         style="stroke-width:44.6219">Module 3</tspan></text>
   </g>
   <!-- default stroke -->
 </svg>
