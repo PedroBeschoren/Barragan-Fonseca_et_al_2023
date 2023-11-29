@@ -68,12 +68,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.45814732"
-     inkscape:cx="-336.13642"
-     inkscape:cy="504.20463"
+     inkscape:zoom="0.64791815"
+     inkscape:cx="297.87713"
+     inkscape:cy="717.68324"
      inkscape:window-width="2880"
      inkscape:window-height="1586"
-     inkscape:window-x="-11"
+     inkscape:window-x="2509"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="g3175" />
@@ -398,7 +398,7 @@
                  id="tspan4704"
                  style="fill:#333333;stroke-width:3.86606"
                  x="98.355606"
-                 y="-40.139847"></tspan></text>
+                 y="-40.139847" /></text>
           </g>
           <!-- transform -->
           <text
@@ -411,7 +411,7 @@
                id="tspan4708"
                style="fill:#333333;stroke-width:3.86606"
                x="2867.7842"
-               y="-1308.9916"></tspan></text>
+               y="-1308.9916" /></text>
         </g>
         <!-- clip18 -->
       </g>
@@ -1382,16 +1382,16 @@
     <!-- transform -->
     <text
        font-weight="normal"
-       font-size="7.35579px"
+       font-size="28.1859px"
        font-family="Helvetica"
        font-style="normal"
        fill="#000000"
        fill-opacity="1"
        stroke="none"
-       x="110.12881"
-       y="183.94688"
+       x="74.081902"
+       y="191.35205"
        id="text1521"
-       style="stroke-width:0.612984">ASV_13</text>
+       style="stroke-width:2.34883">ASV_13</text>
     <!-- transform -->
     <path
        d="m 159.14069,104.05679 c 0,6.31634 -5.1204,11.43674 -11.43674,11.43674 -6.31632,0 -11.43671,-5.1204 -11.43671,-11.43674 0,-6.316315 5.12039,-11.436713 11.43671,-11.436713 6.31634,0 11.43674,5.120398 11.43674,11.436713 z"
@@ -2446,16 +2446,16 @@
     <!-- transform -->
     <text
        font-weight="normal"
-       font-size="7.35579px"
+       font-size="28.2881px"
        font-family="Helvetica"
        font-style="normal"
        fill="#000000"
        fill-opacity="1"
        stroke="none"
-       x="209.66112"
-       y="298.06125"
+       x="162.90929"
+       y="306.42703"
        id="text2357"
-       style="stroke-width:0.612984">ASV_521</text>
+       style="stroke-width:2.35734">ASV_521</text>
     <!-- transform -->
     <path
        d="m 1077.9824,787.42751 c 0,9.56247 -7.752,17.31442 -17.3145,17.31442 -9.5624,0 -17.3144,-7.75195 -17.3144,-17.31442 0,-9.5625 7.752,-17.31442 17.3144,-17.31442 9.5625,0 17.3145,7.75192 17.3145,17.31442 z"
