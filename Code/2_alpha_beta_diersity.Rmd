@@ -55,6 +55,8 @@ beta dispersion is like multivatite homogeniety of variances. just like you can'
 ```{r}
 
 
+
+
 #calculates beta dispersions of the treatment effects
 beta_disper<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray"),
                          group = sample_data(physeq_goodSamples_CSS)[["Treatment"]],
@@ -64,7 +66,7 @@ beta_disper<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_C
 # check if ebta dispersions are significantly differente
 set.seed(100)
 beta_disper_calc<-anova(beta_disper, permutations = 9999)
-betadisp_tukey<-TukeyHSD(beta_disper)
+betadisp_tukey<-TukeyHSD(beta_disper, ordered)
 scores(beta_disper)
 boxplot(beta_disper)
 
@@ -83,7 +85,6 @@ ggsave(beta_diversity, file = "./Results/1_Beta_Dipersion_PCoA.pdf",
        width = 15, 
        height = 15, 
        units = "cm"  )
-
 
 
 
