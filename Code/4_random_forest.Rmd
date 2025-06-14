@@ -377,6 +377,7 @@ boruta_flower_formula<- getConfirmedFormula(fixed_boruta_flower_objt)
 
 # save teh output, as it takes ~10 min to calculate
 save(Boruta_output_flower, file = "./Results/Boruta_output_flower.RData")
+load(file = "./Results/Boruta_output_flower.RData")
 
 # define ASVs tagged as important by boruta
 important_flower_ASVs<-filter(attStats(fixed_boruta_flower_objt), decision=="Confirmed")%>%
@@ -449,6 +450,8 @@ save(model_borutized_flower, file = "./Results/model_borutized_flower.RData")
 ## 8 -  Visualize the flower features on a heat tree 
 
 ```{r}
+
+load(file = "./Results/model_borutized_flower.RData")
 # first, get only the ASVs detected as differentially abundant by Deseq2
 rf_important_heatTrees<-prune_taxa(taxa = important_ASVs, physeq_goodSamples_rarefied)
 
