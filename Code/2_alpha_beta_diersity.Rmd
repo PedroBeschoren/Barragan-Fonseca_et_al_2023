@@ -123,7 +123,9 @@ ifelse(test = physeq_goodSamples_CSS@sam_data$Treatment %in% c("BSF", "MW", "HC"
 
 #calculates beta dispersions of the treatment effects
 beta_disper<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray"),
-                         group = sample_data(physeq_goodSamples_CSS)[["Exuviae_yes_no"]]) 
+                         group = sample_data(physeq_goodSamples_CSS)[["Exuviae_yes_no"]],
+                         type = "centroid", 
+                         sqrt.dist = TRUE)
 
 
 # check if ebta dispersions are significantly differente
@@ -210,8 +212,8 @@ anova_fisher<-aov(fisher ~ Treatment, data = calculated_diversity_df)
 summary(anova_fisher)
 
 # post-hoc, both Tukey and Least Significat Difference
-LSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE)
-
+LSD.test(y = anova_fisher, "Treatment", group=TRUE, console=TRUE, p.adj= "fdr")
+TukeyHSD(anova_fisher)
 
 ```
 
