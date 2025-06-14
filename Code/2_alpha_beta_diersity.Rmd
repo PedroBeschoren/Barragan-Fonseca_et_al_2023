@@ -86,6 +86,31 @@ ggsave(beta_diversity, file = "./Results/1_Beta_Dipersion_PCoA.pdf",
        height = 15, 
        units = "cm"  )
 
+# aditional betadispersion option
+sample_data(physeq_goodSamples_CSS)$treatment_type<-
+  c(rep(x = "Insects", 7), 
+    rep(x = "Controls", 15), 
+    rep(x = "Insects", 13), 
+    rep(x = "Controls", 5))
+
+
+
+#calculates beta dispersions of the treatment effects
+beta_disper2<- betadisper(d = phyloseq::distance(t(otu_table(physeq_goodSamples_CSS)), method="bray"),
+                         group = sample_data(physeq_goodSamples_CSS)[["treatment_type"]],
+                         type = "centroid", sqrt.dist = TRUE) 
+
+
+# check if ebta dispersions are significantly differente
+set.seed(100)
+beta_disper_calc<-anova(beta_disper2, permutations = 9999)
+betadisp_tukey<-TukeyHSD(beta_disper2)
+scores(beta_disper2)
+boxplot(beta_disper2)
+
+
+
+
 
 
 ```
